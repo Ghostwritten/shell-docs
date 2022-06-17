@@ -37,6 +37,7 @@
     "insert-logo",
     "musicxml",
     "prism",
+    "prism-themes",
     "pageview-count",
     "-highlight",
     "-search",
@@ -94,6 +95,9 @@
     },
 
     "prism": {
+      "css": [
+        "prism-themes/themes/prism-holi-theme.css"
+      ],
       "lang": {
         "shell": "bash"
       }
