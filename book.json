@@ -48,7 +48,6 @@
     "-sharing",
     "sharing-plus",
     "sidebar-style",
-    "sitemap-general",
     "theme-default",
     "tbfed-pagefooter"
   ],
@@ -117,10 +116,6 @@
     "sidebar-style": {
        "title": "《Shell Docs》",
        "author": "zongxun"
-    },
-
-    "sitemap-general": {
-       "prefix": "https://smoothies.com.cn/shell-docs/"
     },
 
     "flexible-alerts": {
