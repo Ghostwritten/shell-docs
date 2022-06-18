@@ -9,4 +9,3 @@
   * [Shell Operator](Base/shell_operator.md)
 - [Case](Case/README.md)
   * [Shell Hello World](Case/shell_hello_world.md)
-* [About](About.md)

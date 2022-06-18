@@ -22,7 +22,7 @@
     "gitbook-plugin-musicxml": "^1.0.2",
     "gitbook-plugin-pageview-count": "^1.0.1",
     "gitbook-plugin-prism": "^2.4.0",
-    "gitbook-plugin-prism-themes": "^0.0.2",
+    "gitbook-plugin-prism-themes": "0.0.2",
     "gitbook-plugin-rss": "^3.0.2",
     "gitbook-plugin-search-plus": "^1.0.3",
     "gitbook-plugin-sharing-plus": "^0.0.2",
