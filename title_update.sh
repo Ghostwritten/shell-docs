@@ -28,22 +28,23 @@ repo="github.com/${user}/shell-docs.git"
 
 rm -rf About.md 
 book sm
-cp SUMMARY.md About.md
 sed -i 's/Gitbook Demo/目录/g' About.md
 python3 gitbook-auto-summary.py  .
 
 delete_README() {
-lines_README=`cat SUMMARY-GitBook-auto-summary.md  |grep "*" |grep README |grep -v "序言"  | awk '{print $2}'`
+lines_README=`cat SUMMARY-GitBook-auto-summary.md  | grep "*" |grep README |grep -v "序言"  | awk -F '(' '{print $2}' | awk -F ')' '{print $1}'`
 
 for line_README in $lines_README
 do 
- echo $line_README
+  echo $line_README
   line_README=${line_README//\//\\\/}
   line_README=${line_README//\[/\\[}
   line_README=${line_README//\]/\\]}
   line_README=${line_README//\(/\\\(}
   line_README=${line_README//\)/\\\)}
   line_README=${line_README//\-/\\\-}
+  echo $line_README
+  
  sed -r -i "/$line_README/d" SUMMARY-GitBook-auto-summary.md
 done
 
@@ -65,6 +66,8 @@ do
 done
 
 mv SUMMARY-GitBook-auto-summary.md SUMMARY.md
+cp SUMMARY.md Overview.md
+sed -r   '/序言/a\* \[目录\]\(.\/Overview\.md\)' SUMMARY.md 
 
 }
 

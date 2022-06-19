@@ -1,4 +1,4 @@
-#  Shell $ 字符
+#  Shell dollar 字符
 
 ## 1. $ 常用参数
 ```c
