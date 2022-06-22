@@ -67,7 +67,7 @@ done
 
 mv SUMMARY-GitBook-auto-summary.md SUMMARY.md
 cp SUMMARY.md Overview.md
-sed -r   '/序言/a\* \[目录\]\(.\/Overview\.md\)' SUMMARY.md 
+sed -r -i   '/序言/a\* \[目录\]\(.\/Overview\.md\)' SUMMARY.md 
 
 }
 

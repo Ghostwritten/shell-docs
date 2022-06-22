@@ -13,10 +13,11 @@
      },
 
      "sidebar": {
-        "Linux Command": "https://smoothies.com.cn/linux-command-docs/",
+        "Blog": "https://smoothies.com.cn",
+        "Command": "https://smoothies.com.cn/linux-command-docs/",
         "Gitbook": "https://smoothies.com.cn/gitbook-docs/",
-        "Kubernetes Exam": "https://ghostwritten.gitbook.io/kubernetes-exam-in-action/",
-        "Blog": "https://smoothies.com.cn"
+        "Python": "https://smoothies.com.cn/python-docs/",
+        "Exam": "https://ghostwritten.gitbook.io/kubernetes-exam-in-action/"
      }
   },
   "plugins": [
@@ -49,6 +50,7 @@
     "sharing-plus",
     "sidebar-style",
     "theme-default",
+    "tags",
     "tbfed-pagefooter"
   ],
   "pluginsConfig": {
