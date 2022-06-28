@@ -1,10 +1,7 @@
 # Summary
 
 * [summary](./Overview.md)
-* [gitbook docs](./About.md)
-* [tags](./tags.md)
 * [序言](./README.md)
-* [目录](./Overview.md)
 - [Base](Base/README.md)
   * [shell set 命令](Base/shell_set.md)
   * [shell 通配符扩展](Base/shell_wildcard_expansion.md)
