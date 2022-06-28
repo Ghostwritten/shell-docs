@@ -26,9 +26,9 @@ user='Ghostwritten'
 email='1zoxun1@gmail.com'
 repo="github.com/${user}/shell-docs.git"
 
-rm -rf About.md 
+#rm -rf About.md 
 book sm
-sed -i 's/Gitbook Demo/目录/g' About.md
+#sed -i 's/Gitbook Demo/目录/g' About.md
 python3 gitbook-auto-summary.py  .
 
 delete_README() {

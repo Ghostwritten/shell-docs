@@ -27,7 +27,8 @@ email='1zoxun1@gmail.com'
 repo="github.com/${user}/shell-docs.git"
 
 book sm
-cp -f SUMMARY.md About.md
+cp -f SUMMARY.md Overview.md
+sed -r -i   '/序言/a\* \[目录\]\(.\/Overview\.md\)' SUMMARY.md
 
 
 push_master(){
@@ -40,7 +41,7 @@ git push origin master
 
 }
 push_gh-pages(){
-cp -f About.md _book/README.md
+cp -f Overview.md  _book/README.md
 cd _book
 git init
 git remote add origin https://${repo}
