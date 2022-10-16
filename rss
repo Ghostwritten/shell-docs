@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Gitbook Docs]]></title>
+        <description><![CDATA[This is the best book ever.]]></description>
+        <link>https://smoothies.com.cn/shell-docs/</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Sun, 16 Oct 2022 08:58:36 GMT</lastBuildDate>
+        <atom:link href="http://smoothies.com.cn/rss" rel="self" type="application/rss+xml"/>
+        <author><![CDATA[Zong Xun]]></author>
+        <managingEditor><![CDATA[writer@smoothies.com.cn (Zong Xun)]]></managingEditor>
+        <webMaster><![CDATA[webmaster@smoothies.com.cn (Zong Xun)]]></webMaster>
+        <category><![CDATA[gitbook]]></category>
+        <item>
+            <title><![CDATA[Summary]]></title>
+            <link>https://smoothies.com.cn/shell-docs/Overview.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Overview.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[序言]]></title>
+            <description><![CDATA[这是一本关于集合 shell 的书。]]></description>
+            <link>https://smoothies.com.cn/shell-docs/</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell 简介]]></title>
+            <description><![CDATA[在这里插入图片描述]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Base/README.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Base/README.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell set 命令]]></title>
+            <description><![CDATA[会显示所有的环境变量和 Shell 函数]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Base/shell_set.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Base/shell_set.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 通配符扩展]]></title>
+            <description><![CDATA[Shell 接收到用户输入的命令以后，会根据空格将用户的输入，拆分成一个个词元（token）。然后，Shell 会扩展词元里面的特殊字符，扩展完成后才会调用相应的命令。]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Base/shell_wildcard_expansion.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Base/shell_wildcard_expansion.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell dollar 字符]]></title>
+            <description><![CDATA[可以用${ }分别替换得到不同的值：
+复制代码代码如下:]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Base/shell_dollar_string.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Base/shell_dollar_string.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell 默认参数]]></title>
+            <description><![CDATA[输出：]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Base/shell_default_parameter.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Base/shell_default_parameter.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell wait 等待命令]]></title>
+            <description><![CDATA[在这里插入图片描述]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Base/shell_command_wait.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Base/shell_command_wait.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell IFS]]></title>
+            <description><![CDATA[参考：]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Base/shell_IFS.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Base/shell_IFS.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 引号和转义]]></title>
+            <description><![CDATA[Bash 只有一种数据类型，就是字符串。不管用户输入什么数据，Bash 都视为字符串。因此，字符串相关的引号和转义，对 Bash 来说就非常重要。]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Base/shell_quotes_and_escaping.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Base/shell_quotes_and_escaping.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 命令返回值判断]]></title>
+            <description><![CDATA[在这里插入图片描述]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Base/shell_command_return.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Base/shell_command_return.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 判断]]></title>
+            <description><![CDATA[在这里插入图片描述]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Base/shell_control_condition.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Base/shell_control_condition.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell while getopts]]></title>
+            <description><![CDATA[getpots是Shell命令行参数解析工具，旨在从Shell Script的命令行当中解析参数。getopts被Shell程序用来分析位置参数，option包含需要被识别的选项字符，如果这里的字符后面跟着一个冒号，表明该字符选项需要一个参数，其参数需要以空格分隔。冒号和问号不能被用作选项字符。getopts每次被调用时，它会将下一个选项字符放置到变量中，OPTARG则可以拿到参数值；如果option前面加冒号，则代表忽略错误。]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Base/shell_while_getopts.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Base/shell_while_getopts.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell 命令行操作]]></title>
+            <description><![CDATA[Bash 内置了 Readline 库，具有这个库提供的很多“行操作”功能，比如命令的自动补全，可以大大加快操作速度。]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Base/shell_command_line.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Base/shell_command_line.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 循环]]></title>
+            <description><![CDATA[示例]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Base/shell_loop.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Base/shell_loop.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 创建临时文件/目录]]></title>
+            <description><![CDATA[Bash 脚本有时需要创建临时文件或临时目录。常见的做法是，在/tmp目录里面创建文件或目录，这样做有很多弊端，使用mktemp命令是最安全的做法。]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Base/shell_tmp_file_or_dir.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Base/shell_tmp_file_or_dir.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell sleep 睡眠]]></title>
+            <description><![CDATA[在这里插入图片描述]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Base/shell_command_sleep.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Base/shell_command_sleep.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 多线程脚本]]></title>
+            <description><![CDATA[执行]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Base/shell_multithread_script.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Base/shell_multithread_script.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 数组]]></title>
+            <description><![CDATA[@[toc]]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Base/shell_array.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Base/shell_array.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell 跨脚本变量传递]]></title>
+            <description><![CDATA[当前脚本调用另一个脚本变量]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Base/shell_Cross-script_variable_declaration.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Base/shell_Cross-script_variable_declaration.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 查看帮助]]></title>
+            <description><![CDATA[Shell 脚本添加查看帮助，让他人更容易看懂理解。]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Base/shell_help.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Base/shell_help.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 运算符]]></title>
+            <description><![CDATA[在这里插入图片描述]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Base/shell_operator.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Base/shell_operator.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 变量]]></title>
+            <description><![CDATA[Bash 变量分成环境变量和自定义变量两类。]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Base/shell_variable.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Base/shell_variable.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 函数]]></title>
+            <description><![CDATA[对各个部分的说明：]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Base/shell_function.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Base/shell_function.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[No title]]></title>
+            <description><![CDATA[Shell 日志与打印输出]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Base/shell_log_and_print.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Base/shell_log_and_print.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 实例]]></title>
+            <description><![CDATA[我会尝试收集有趣、应用、学习、艺术等充满点子的 shell 脚本。]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/README.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/README.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 监控采集]]></title>
+            <description><![CDATA[在这里插入图片描述]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Monitor/README.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Monitor/README.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 判断文件/目录状态]]></title>
+            <description><![CDATA[tags: 监控]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Monitor/shell_fileOrdir_state.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Monitor/shell_fileOrdir_state.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 报告服务器信息]]></title>
+            <description><![CDATA[tags: 监控]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Monitor/shell_os_message2.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Monitor/shell_os_message2.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 磁盘空间]]></title>
+            <description><![CDATA[tags: 监控]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Monitor/shell_disk.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Monitor/shell_disk.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 天气预报]]></title>
+            <description><![CDATA[tags: 监控]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Monitor/shell_weather.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Monitor/shell_weather.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell CPU]]></title>
+            <description><![CDATA[tags: 监控]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Monitor/shell_CPU.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Monitor/shell_CPU.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 硬件信息]]></title>
+            <description><![CDATA[tags: 监控]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Monitor/shell_hardware.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Monitor/shell_hardware.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 获取 IP 位置]]></title>
+            <description><![CDATA[tags: 监控]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Monitor/shell_get_ip_address.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Monitor/shell_get_ip_address.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell 显示系统信息菜单]]></title>
+            <description><![CDATA[tags: 监控]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Monitor/shell_os_message.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Monitor/shell_os_message.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Hello World]]></title>
+            <description><![CDATA[hello-world.sh]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/shell_hello_world.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/shell_hello_world.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell 数学]]></title>
+            <description><![CDATA[数学在Bash脚本中使用吗？数学经常用于脚本，尤其是在编写复杂的 crontab 报告、监控插件、使用动态配置设置脚本或其他自动化任务（如显示 Raspberry PI CPU 温度）时。总是需要进行一些算术计算。]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Math/README.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Math/README.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 减法]]></title>
+            <description><![CDATA[tags: 数学]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Math/shell_subtraction.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Math/shell_subtraction.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell 乘法]]></title>
+            <description><![CDATA[tags: 数学]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Math/shell_Multiplication.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Math/shell_Multiplication.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell 石头剪刀布]]></title>
+            <description><![CDATA[tags: 数学]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Math/shell_rock-paper-scissors.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Math/shell_rock-paper-scissors.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell  比较大小]]></title>
+            <description><![CDATA[tags: 数学]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Math/shell_compare.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Math/shell_compare.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 加法]]></title>
+            <description><![CDATA[tags: 数学]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Math/shell_addition.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Math/shell_addition.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell 游戏]]></title>
+            <description><![CDATA[学习是艰苦的工作，没有人喜欢工作。这意味着无论学习 Bash / Shell 多么容易，对您来说它仍然可能是一种工作。当然，除非你通过游戏学习。]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Game/README.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Game/README.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell 模拟抽奖]]></title>
+            <description><![CDATA[tags: 游戏]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Game/shell_lottery.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Game/shell_lottery.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell 艺术]]></title>
+            <description><![CDATA[Shell 可以勾勒那些看似无用的视觉杰作。]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Art/README.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Art/README.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell 微调加载]]></title>
+            <description><![CDATA[tags: 艺术]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Art/shell_spinner_loading.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Art/shell_spinner_loading.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell 菱形图案]]></title>
+            <description><![CDATA[tags: 艺术]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Art/shell_diamond.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Art/shell_diamond.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Shell  大小写]]></title>
+            <description><![CDATA[tags: 艺术]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Art/shell_upper_lower.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Art/shell_upper_lower.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell 颜色输出]]></title>
+            <description><![CDATA[tags: 艺术]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Art/shell_color.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Art/shell_color.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell 命令输出]]></title>
+            <description><![CDATA[process.sh]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/shell_command_return.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/shell_command_return.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell 简单交互]]></title>
+            <description><![CDATA[interactive.sh]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/shell_read.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/shell_read.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell 任务]]></title>
+            <description><![CDATA[在这里插入图片描述]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Task/README.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Task/README.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell 挂载目录]]></title>
+            <description><![CDATA[tags: 任务]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Task/shell_mount.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Task/shell_mount.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell 批量修改文件名]]></title>
+            <description><![CDATA[tags: 任务]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Task/shell_change_files.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Task/shell_change_files.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell 上移目录]]></title>
+            <description><![CDATA[tags: 任务]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Task/shell_moveup_dir.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Task/shell_moveup_dir.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[shell 清理日志]]></title>
+            <description><![CDATA[tags: 任务]]></description>
+            <link>https://smoothies.com.cn/shell-docs/Case/Task/shell_clean_log.html</link>
+            <guid isPermaLink="true">https://smoothies.com.cn/shell-docs/Case/Task/shell_clean_log.html</guid>
+            <dc:creator><![CDATA[Zong Xun]]></dc:creator>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,1460 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>shell 判断 · Shell Docs</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="宗勋 - zongxun">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-change_girls/girls.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-holi-theme.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sidebar-style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tags/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="shell_while_getopts.html" />
+    
+    
+    <link rel="prev" href="shell_command_return.html" />
+    
+
+    <link href="http://smoothies.com.cn/rss" title="Gitbook Docs" rel="alternate" type="application/rss+xml" />
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"Ghostwritten","repo":"shell-docs","type":"star","count":true,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/docker-docs/Overview.html" target="_blank" class="custom-link">Docker</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn" target="_blank" class="custom-link">Blog</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/kubernetes-docs/Overview.html" target="_blank" class="custom-link">Kubernetes</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/go-docs/Overview.html" target="_blank" class="custom-link">Go</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/prometheus-docs/Overview.html" target="_blank" class="custom-link">Prometheus</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/linux-command-docs/Overview.html" target="_blank" class="custom-link">Command</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/javascript-docs/Overview.html" target="_blank" class="custom-link">Javascript</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/shell-docs/Overview.html" target="_blank" class="custom-link">Shell</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/linux-docs/Overview.html" target="_blank" class="custom-link">Linux</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/gitbook-docs/Overview.html" target="_blank" class="custom-link">Gitbook</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/python-docs/Overview.html" target="_blank" class="custom-link">Python</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://ghostwritten.gitbook.io/kubernetes-exam-in-action/" target="_blank" class="custom-link">Exam</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../Overview.html">
+            
+                <a href="../Overview.html">
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    序言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Base
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="shell_set.html">
+            
+                <a href="shell_set.html">
+            
+                    
+                    shell set 命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="shell_wildcard_expansion.html">
+            
+                <a href="shell_wildcard_expansion.html">
+            
+                    
+                    shell 通配符扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="shell_dollar_string.html">
+            
+                <a href="shell_dollar_string.html">
+            
+                    
+                    shell dollar 字符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="shell_default_parameter.html">
+            
+                <a href="shell_default_parameter.html">
+            
+                    
+                    shell 默认参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="shell_command_wait.html">
+            
+                <a href="shell_command_wait.html">
+            
+                    
+                    shell wait 等待命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="shell_IFS.html">
+            
+                <a href="shell_IFS.html">
+            
+                    
+                    shell ifs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="shell_quotes_and_escaping.html">
+            
+                <a href="shell_quotes_and_escaping.html">
+            
+                    
+                    shell 引号和转义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="shell_command_return.html">
+            
+                <a href="shell_command_return.html">
+            
+                    
+                    shell 命令返回值判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.9" data-path="shell_control_condition.html">
+            
+                <a href="shell_control_condition.html">
+            
+                    
+                    shell 判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="shell_while_getopts.html">
+            
+                <a href="shell_while_getopts.html">
+            
+                    
+                    shell while getopts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="shell_command_line.html">
+            
+                <a href="shell_command_line.html">
+            
+                    
+                    shell 命令行操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="shell_loop.html">
+            
+                <a href="shell_loop.html">
+            
+                    
+                    shell 循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="shell_tmp_file_or_dir.html">
+            
+                <a href="shell_tmp_file_or_dir.html">
+            
+                    
+                    shell 创建临时文件 目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="shell_command_sleep.html">
+            
+                <a href="shell_command_sleep.html">
+            
+                    
+                    shell sleep 睡眠
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="shell_multithread_script.html">
+            
+                <a href="shell_multithread_script.html">
+            
+                    
+                    shell 多线程脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="shell_array.html">
+            
+                <a href="shell_array.html">
+            
+                    
+                    shell 数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="shell_Cross-script_variable_declaration.html">
+            
+                <a href="shell_Cross-script_variable_declaration.html">
+            
+                    
+                    shell 跨脚本变量传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="shell_help.html">
+            
+                <a href="shell_help.html">
+            
+                    
+                    shell 查看帮助
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="shell_operator.html">
+            
+                <a href="shell_operator.html">
+            
+                    
+                    shell 运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="shell_variable.html">
+            
+                <a href="shell_variable.html">
+            
+                    
+                    shell 变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21" data-path="shell_function.html">
+            
+                <a href="shell_function.html">
+            
+                    
+                    shell 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22" data-path="shell_log_and_print.html">
+            
+                <a href="shell_log_and_print.html">
+            
+                    
+                    shell 日志与打印输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Case/">
+            
+                <a href="../Case/">
+            
+                    
+                    Case
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Case/Monitor/">
+            
+                <a href="../Case/Monitor/">
+            
+                    
+                    Monitor
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../Case/Monitor/shell_fileOrdir_state.html">
+            
+                <a href="../Case/Monitor/shell_fileOrdir_state.html">
+            
+                    
+                    shell 判断文件 目录状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../Case/Monitor/shell_os_message2.html">
+            
+                <a href="../Case/Monitor/shell_os_message2.html">
+            
+                    
+                    shell 报告服务器信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../Case/Monitor/shell_disk.html">
+            
+                <a href="../Case/Monitor/shell_disk.html">
+            
+                    
+                    shell 磁盘空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../Case/Monitor/shell_weather.html">
+            
+                <a href="../Case/Monitor/shell_weather.html">
+            
+                    
+                    shell 天气预报
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../Case/Monitor/shell_CPU.html">
+            
+                <a href="../Case/Monitor/shell_CPU.html">
+            
+                    
+                    shell cpu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../Case/Monitor/shell_hardware.html">
+            
+                <a href="../Case/Monitor/shell_hardware.html">
+            
+                    
+                    shell 硬件信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../Case/Monitor/shell_get_ip_address.html">
+            
+                <a href="../Case/Monitor/shell_get_ip_address.html">
+            
+                    
+                    shell 获取 ip 位置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../Case/Monitor/shell_os_message.html">
+            
+                <a href="../Case/Monitor/shell_os_message.html">
+            
+                    
+                    shell 显示系统信息菜单
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Case/shell_hello_world.html">
+            
+                <a href="../Case/shell_hello_world.html">
+            
+                    
+                    hello world
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Case/Math/">
+            
+                <a href="../Case/Math/">
+            
+                    
+                    Math
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Case/Math/shell_subtraction.html">
+            
+                <a href="../Case/Math/shell_subtraction.html">
+            
+                    
+                    shell 减法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Case/Math/shell_Multiplication.html">
+            
+                <a href="../Case/Math/shell_Multiplication.html">
+            
+                    
+                    shell 乘法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../Case/Math/shell_rock-paper-scissors.html">
+            
+                <a href="../Case/Math/shell_rock-paper-scissors.html">
+            
+                    
+                    shell 石头剪刀布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../Case/Math/shell_compare.html">
+            
+                <a href="../Case/Math/shell_compare.html">
+            
+                    
+                    shell  比较大小
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.5" data-path="../Case/Math/shell_addition.html">
+            
+                <a href="../Case/Math/shell_addition.html">
+            
+                    
+                    shell 加法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Case/Game/">
+            
+                <a href="../Case/Game/">
+            
+                    
+                    Game
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Case/Game/shell_lottery.html">
+            
+                <a href="../Case/Game/shell_lottery.html">
+            
+                    
+                    shell 模拟抽奖
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Case/Art/">
+            
+                <a href="../Case/Art/">
+            
+                    
+                    Art
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../Case/Art/shell_spinner_loading.html">
+            
+                <a href="../Case/Art/shell_spinner_loading.html">
+            
+                    
+                    shell 微调加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="../Case/Art/shell_diamond.html">
+            
+                <a href="../Case/Art/shell_diamond.html">
+            
+                    
+                    shell 菱形图案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="../Case/Art/shell_upper_lower.html">
+            
+                <a href="../Case/Art/shell_upper_lower.html">
+            
+                    
+                    shell  大小写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="../Case/Art/shell_color.html">
+            
+                <a href="../Case/Art/shell_color.html">
+            
+                    
+                    shell 颜色输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../Case/shell_command_return.html">
+            
+                <a href="../Case/shell_command_return.html">
+            
+                    
+                    shell 命令输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../Case/shell_read.html">
+            
+                <a href="../Case/shell_read.html">
+            
+                    
+                    shell 简单交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../Case/Task/">
+            
+                <a href="../Case/Task/">
+            
+                    
+                    Task
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.8.1" data-path="../Case/Task/shell_mount.html">
+            
+                <a href="../Case/Task/shell_mount.html">
+            
+                    
+                    shell 挂载目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.2" data-path="../Case/Task/shell_change_files.html">
+            
+                <a href="../Case/Task/shell_change_files.html">
+            
+                    
+                    shell 批量修改文件名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.3" data-path="../Case/Task/shell_moveup_dir.html">
+            
+                <a href="../Case/Task/shell_moveup_dir.html">
+            
+                    
+                    shell 上移目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.4" data-path="../Case/Task/shell_clean_log.html">
+            
+                <a href="../Case/Task/shell_clean_log.html">
+            
+                    
+                    shell 清理日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >shell 判断</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#shell-&#x5224;&#x65AD;"><b></b>Shell &#x5224;&#x65AD;</a></li><ul><li><span class="title-icon "></span><a href="#1-if"><b></b>1. if</a></li><ul><li><span class="title-icon "></span><a href="#11-if"><b></b>1.1 if</a></li><li><span class="title-icon "></span><a href="#12-if-else"><b></b>1.2 if else</a></li><li><span class="title-icon "></span><a href="#13-if-else-if-else"><b></b>1.3 if else-if else</a></li><li><span class="title-icon "></span><a href="#14-if-test"><b></b>1.4 if test</a></li><li><span class="title-icon "></span><a href="#15-if-&#x6587;&#x4EF6;&#x5224;&#x65AD;"><b></b>1.5 if &#x6587;&#x4EF6;&#x5224;&#x65AD;</a></li></ul><li><span class="title-icon "></span><a href="#2-case"><b></b>2. case</a></li><li><span class="title-icon "></span><a href="#3-&#x7EC4;&#x5408;&#x8868;&#x8FBE;&#x5F0F;"><b></b>3. &#x7EC4;&#x5408;&#x8868;&#x8FBE;&#x5F0F;</a></li></ul></ul></div><a href="#shell-&#x5224;&#x65AD;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="shell-&#x5224;&#x65AD;"><a name="shell-&#x5224;&#x65AD;" class="anchor-navigation-ex-anchor" href="#shell-&#x5224;&#x65AD;"><i class="fa fa-link" aria-hidden="true"></i></a>Shell &#x5224;&#x65AD;</h1>
+<p><img src="https://img-blog.csdnimg.cn/0e80634f81ff4cdd951648e03b88fd18.gif#pic_center" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<h2 id="1-if"><a name="1-if" class="anchor-navigation-ex-anchor" href="#1-if"><i class="fa fa-link" aria-hidden="true"></i></a>1. if</h2>
+<h3 id="11-if"><a name="11-if" class="anchor-navigation-ex-anchor" href="#11-if"><i class="fa fa-link" aria-hidden="true"></i></a>1.1 if</h3>
+<pre class="language-"><code class="lang-powershell"><span class="token keyword">if</span> <span class="token keyword">else</span>
+<span class="token keyword">if</span>
+<span class="token keyword">if</span> &#x8BED;&#x53E5;&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#xFF1A;
+
+<span class="token keyword">if</span> condition
+then
+    command1 
+    command2
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    commandN 
+fi
+</code></pre>
+<p>&#x5199;&#x6210;&#x4E00;&#x884C;&#xFF08;&#x9002;&#x7528;&#x4E8E;&#x7EC8;&#x7AEF;&#x547D;&#x4EE4;&#x63D0;&#x793A;&#x7B26;&#xFF09;&#xFF1A;</p>
+<pre class="language-"><code class="lang-powershell"><span class="token keyword">if</span> <span class="token punctuation">[</span> $<span class="token punctuation">(</span><span class="token function">ps</span> <span class="token operator">-</span>ef <span class="token punctuation">|</span> grep <span class="token operator">-</span>c <span class="token string">&quot;ssh&quot;</span><span class="token punctuation">)</span> <span class="token operator">-gt</span> 1 <span class="token punctuation">]</span><span class="token punctuation">;</span> then <span class="token function">echo</span> <span class="token string">&quot;true&quot;</span><span class="token punctuation">;</span> fi
+</code></pre>
+<p>&#x672B;&#x5C3E;&#x7684;fi&#x5C31;&#x662F;if&#x5012;&#x8FC7;&#x6765;&#x62FC;&#x5199;&#xFF0C;&#x540E;&#x9762;&#x8FD8;&#x4F1A;&#x9047;&#x5230;&#x7C7B;&#x4F3C;&#x7684;&#x3002;</p>
+<h3 id="12-if-else"><a name="12-if-else" class="anchor-navigation-ex-anchor" href="#12-if-else"><i class="fa fa-link" aria-hidden="true"></i></a>1.2 if else</h3>
+<pre class="language-"><code class="lang-powershell"><span class="token keyword">if</span> <span class="token keyword">else</span>
+<span class="token keyword">if</span> <span class="token keyword">else</span> &#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#xFF1A;
+
+<span class="token keyword">if</span> condition
+then
+    command1 
+    command2
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    commandN
+<span class="token keyword">else</span>
+    command
+fi
+</code></pre>
+<h3 id="13-if-else-if-else"><a name="13-if-else-if-else" class="anchor-navigation-ex-anchor" href="#13-if-else-if-else"><i class="fa fa-link" aria-hidden="true"></i></a>1.3 if else-if else</h3>
+<p>if else-if else &#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-powershell"><span class="token keyword">if</span> condition1
+then
+    command1
+elif condition2 
+then 
+    command2
+<span class="token keyword">else</span>
+    commandN
+fi
+</code></pre>
+<p>&#x4EE5;&#x4E0B;&#x5B9E;&#x4F8B;&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#x662F;&#x5426;&#x76F8;&#x7B49;&#xFF1A;</p>
+<pre class="language-"><code class="lang-powershell">a=10
+b=20
+<span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$a</span> == <span class="token variable">$b</span> <span class="token punctuation">]</span>
+then
+   <span class="token function">echo</span> <span class="token string">&quot;a &#x7B49;&#x4E8E; b&quot;</span>
+elif <span class="token punctuation">[</span> <span class="token variable">$a</span> <span class="token operator">-gt</span> <span class="token variable">$b</span> <span class="token punctuation">]</span>
+then
+   <span class="token function">echo</span> <span class="token string">&quot;a &#x5927;&#x4E8E; b&quot;</span>
+elif <span class="token punctuation">[</span> <span class="token variable">$a</span> <span class="token operator">-lt</span> <span class="token variable">$b</span> <span class="token punctuation">]</span>
+then
+   <span class="token function">echo</span> <span class="token string">&quot;a &#x5C0F;&#x4E8E; b&quot;</span>
+<span class="token keyword">else</span>
+   <span class="token function">echo</span> <span class="token string">&quot;&#x6CA1;&#x6709;&#x7B26;&#x5408;&#x7684;&#x6761;&#x4EF6;&quot;</span>
+fi
+&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;
+
+a &#x5C0F;&#x4E8E; b
+</code></pre>
+<h3 id="14-if-test"><a name="14-if-test" class="anchor-navigation-ex-anchor" href="#14-if-test"><i class="fa fa-link" aria-hidden="true"></i></a>1.4 if test</h3>
+<p>if else&#x8BED;&#x53E5;&#x7ECF;&#x5E38;&#x4E0E;test&#x547D;&#x4EE4;&#x7ED3;&#x5408;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-powershell">num1=$<span class="token punctuation">[</span>2*3<span class="token punctuation">]</span>
+num2=$<span class="token punctuation">[</span>1+5<span class="token punctuation">]</span>
+<span class="token keyword">if</span> test $<span class="token namespace">[num1]</span> <span class="token operator">-eq</span> $<span class="token namespace">[num2]</span>
+then
+    <span class="token function">echo</span> <span class="token string">&apos;&#x4E24;&#x4E2A;&#x6570;&#x5B57;&#x76F8;&#x7B49;!&apos;</span>
+<span class="token keyword">else</span>
+    <span class="token function">echo</span> <span class="token string">&apos;&#x4E24;&#x4E2A;&#x6570;&#x5B57;&#x4E0D;&#x76F8;&#x7B49;!&apos;</span>
+fi
+&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;
+
+&#x4E24;&#x4E2A;&#x6570;&#x5B57;&#x76F8;&#x7B49;<span class="token operator">!</span>
+</code></pre>
+<h3 id="15-if-&#x6587;&#x4EF6;&#x5224;&#x65AD;"><a name="15-if-&#x6587;&#x4EF6;&#x5224;&#x65AD;" class="anchor-navigation-ex-anchor" href="#15-if-&#x6587;&#x4EF6;&#x5224;&#x65AD;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5 if &#x6587;&#x4EF6;&#x5224;&#x65AD;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x57FA;&#x672C;&#x7684;</th>
+<th>&#x610F;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[ -a FILE]</td>
+<td>&#x5982;&#x679C;FILE&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ -b FILE]</td>
+<td>&#x5982;&#x679C;FILE&#x5B58;&#x5728;&#x5E76;&#x4E14;&#x662F;&#x5757;&#x7279;&#x6B8A;FILE&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ -c FILE]</td>
+<td>&#x5982;&#x679C;FILE&#x5B58;&#x5728;&#x5E76;&#x4E14;&#x662F;&#x5B57;&#x7B26;&#x7279;&#x6B8A;FILE&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ -d FILE]</td>
+<td>&#x5982;&#x679C;FILE&#x5B58;&#x5728;&#x5E76;&#x4E14;&#x662F;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ -e FILE]</td>
+<td>&#x5982;&#x679C;FILE&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ -f FILE]</td>
+<td>&#x5982;&#x679C;FILE&#x5B58;&#x5728;&#x5E76;&#x4E14;&#x662F;&#x5E38;&#x89C4;FILE&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ -g FILE]</td>
+<td>&#x5982;&#x679C;FILE&#x5B58;&#x5728;&#x4E14;&#x5176; SGID &#x4F4D;&#x5DF2;&#x8BBE;&#x7F6E;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ -h FILE]</td>
+<td>&#x5982;&#x679C;FILE&#x5B58;&#x5728;&#x5E76;&#x4E14;&#x662F;&#x7B26;&#x53F7;&#x94FE;&#x63A5;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ -k FILE]</td>
+<td>&#x5982;&#x679C;FILE&#x5B58;&#x5728;&#x5E76;&#x4E14;&#x5176;&#x7C98;&#x6027;&#x4F4D;&#x5DF2;&#x8BBE;&#x7F6E;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ -p FILE]</td>
+<td>&#x5982;&#x679C;FILE&#x5B58;&#x5728;&#x5E76;&#x4E14;&#x662F;&#x547D;&#x540D;&#x7BA1;&#x9053; (FIFO)&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ -r FILE]</td>
+<td>&#x5982;&#x679C;FILE&#x5B58;&#x5728;&#x4E14;&#x53EF;&#x8BFB;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ -s FILE]</td>
+<td>&#x5982;&#x679C;FILE&#x5B58;&#x5728;&#x4E14;&#x5927;&#x5C0F;&#x5927;&#x4E8E;&#x96F6;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ -t FD ]</td>
+<td>&#x5982;&#x679C;FILE&#x63CF;&#x8FF0;&#x7B26;FD&#x6253;&#x5F00;&#x5E76;&#x6307;&#x5411;&#x7EC8;&#x7AEF;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ -u FILE]</td>
+<td>&#x5982;&#x679C;FILE&#x5B58;&#x5728;&#x4E14;&#x5176; SUID&#xFF08;&#x8BBE;&#x7F6E;&#x7528;&#x6237; ID&#xFF09;&#x4F4D;&#x5DF2;&#x8BBE;&#x7F6E;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ -w FILE]</td>
+<td>&#x5982;&#x679C;FILE&#x5B58;&#x5728;&#x4E14;&#x53EF;&#x5199;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ -x FILE]</td>
+<td>&#x5982;&#x679C;FILE&#x5B58;&#x5728;&#x4E14;&#x53EF;&#x6267;&#x884C;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ -O FILE]</td>
+<td>&#x5982;&#x679C;FILE&#x5B58;&#x5728;&#x5E76;&#x4E14;&#x5F52;&#x6709;&#x6548;&#x7528;&#x6237; ID &#x6240;&#x6709;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ -G FILE]</td>
+<td>&#x5982;&#x679C;FILE&#x5B58;&#x5728;&#x5E76;&#x4E14;&#x5F52;&#x6709;&#x6548;&#x7EC4; ID &#x6240;&#x6709;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ -L FILE]</td>
+<td>&#x5982;&#x679C;FILE&#x5B58;&#x5728;&#x5E76;&#x4E14;&#x662F;&#x7B26;&#x53F7;&#x94FE;&#x63A5;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ -N FILE]</td>
+<td>&#x5982;&#x679C;FILE&#x5B58;&#x5728;&#x5E76;&#x4E14;&#x81EA;&#x4E0A;&#x6B21;&#x8BFB;&#x53D6;&#x540E;&#x5DF2;&#x88AB;&#x4FEE;&#x6539;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ -S FILE]</td>
+<td>&#x5982;&#x679C;FILE&#x5B58;&#x5728;&#x5E76;&#x4E14;&#x662F;&#x4E00;&#x4E2A;&#x5957;&#x63A5;&#x5B57;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[FILE1- nt FILE 2 ]</td>
+<td>&#x5982;&#x679C;FILE1&#x7684;&#x66F4;&#x6539;&#x6BD4;FILE2&#x66F4;&#x65B0;&#xFF0C;&#x6216;&#x8005;FILE1&#x5B58;&#x5728;&#x800C;FILE2&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[FILE1 -otFILE 2 ]</td>
+<td>&#x5982;&#x679C;FILE1&#x65E9;&#x4E8E;FILE2&#xFF0C;&#x6216;&#x8005;FILE2&#x5B58;&#x5728;&#x800C;FILE1&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[FILE1 -efFILE 2 ]</td>
+<td>&#x5982;&#x679C;FILE1&#x548C;FILE2&#x5F15;&#x7528;&#x76F8;&#x540C;&#x7684;&#x8BBE;&#x5907;&#x548C; inode &#x53F7;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ -o&#x9009;&#x9879;&#x540D;&#x79F0;]</td>
+<td>&#x5982;&#x679C;&#x542F;&#x7528;&#x4E86; shell &#x9009;&#x9879;&#x201C;OPTIONNAME&#x201D;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[-z&#x5B57;&#x7B26;&#x4E32;]</td>
+<td>&#x5982;&#x679C;&#x201C;STRING&#x201D;&#x4E3A;&#x96F6;&#xFF0C;&#x5219;&#x957F;&#x5EA6;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[-n&#x5B57;&#x7B26;&#x4E32;] &#x6216; [&#x5B57;&#x7B26;&#x4E32;]</td>
+<td>&#x5982;&#x679C;&#x201C;STRING&#x201D;&#x7684;&#x957F;&#x5EA6;&#x4E0D;&#x4E3A;&#x96F6;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ &#x5B57;&#x7B26;&#x4E32; 1 == &#x5B57;&#x7B26;&#x4E32; 2 ]</td>
+<td>&#x5982;&#x679C;&#x5B57;&#x7B26;&#x4E32;&#x76F8;&#x7B49;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002; &#x4E3A;&#x4E86;&#x4E25;&#x683C;&#x9075;&#x5B88; POSIX &#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x201C;=&#x201D;&#x4EE3;&#x66FF;&#x201C;==&#x201D; &#x3002;</td>
+</tr>
+<tr>
+<td>[ &#x5B57;&#x7B26;&#x4E32; 1 &#xFF01;= &#x5B57;&#x7B26;&#x4E32; 2 ]</td>
+<td>&#x5982;&#x679C;&#x5B57;&#x7B26;&#x4E32;&#x4E0D;&#x76F8;&#x7B49;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ &#x5B57;&#x7B26;&#x4E32; 1 &lt; &#x5B57;&#x7B26;&#x4E32; 2 ]</td>
+<td>&#x5982;&#x679C;&#x201C;STRING1&#x201D;&#x5728;&#x5F53;&#x524D;&#x8BED;&#x8A00;&#x73AF;&#x5883;&#x4E2D;&#x6309;&#x5B57;&#x5178;&#x987A;&#x5E8F;&#x6392;&#x5728;&#x201C;STRING2 &#x201D;&#x4E4B;&#x524D;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ &#x5B57;&#x7B26;&#x4E32; 1 &gt; &#x5B57;&#x7B26;&#x4E32; 2 ]</td>
+<td>&#x5982;&#x679C;&#x201C;STRING1&#x201D;&#x5728;&#x5F53;&#x524D;&#x8BED;&#x8A00;&#x73AF;&#x5883;&#x4E2D;&#x6309;&#x5B57;&#x5178;&#x987A;&#x5E8F;&#x6392;&#x5728;&#x201C;STRING2 &#x201D;&#x4E4B;&#x540E;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ ARG1 &#x5F00; ARG2 ]</td>
+<td>&#x201C;OP&#x201D;&#x662F;-eq&#x3001;-ne&#x3001;-lt&#x3001;-le&#x3001;-gt&#x6216;-ge&#x4E4B;&#x4E00;&#x3002;&#x5982;&#x679C;&quot;ARG1&quot;&#x5206;&#x522B;&#x7B49;&#x4E8E;&#x3001;&#x4E0D;&#x7B49;&#x4E8E;&#x3001;&#x5C0F;&#x4E8E;&#x3001;&#x5C0F;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;&#x3001;&#x5927;&#x4E8E;&#x6216;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;&quot;ARG2&quot; &#xFF0C;&#x5219;&#x8FD9;&#x4E9B;&#x7B97;&#x672F;&#x4E8C;&#x5143;&#x8FD0;&#x7B97;&#x7B26;&#x8FD4;&#x56DE;&#x771F;&#x3002; &#x201C;ARG1&#x201D;&#x548C;&#x201C;ARG2&#x201D;&#x662F;&#x6574;&#x6570;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-case"><a name="2-case" class="anchor-navigation-ex-anchor" href="#2-case"><i class="fa fa-link" aria-hidden="true"></i></a>2. case</h2>
+<pre class="language-"><code class="lang-bash"><span class="token assign-left variable">name</span><span class="token operator">=</span><span class="token variable"><span class="token variable">`</span><span class="token function">basename</span> $0 .sh<span class="token variable">`</span></span>
+<span class="token keyword">case</span> <span class="token variable">$1</span> <span class="token keyword">in</span>
+ s<span class="token operator">|</span>start<span class="token punctuation">)</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">&quot;start...&quot;</span>
+        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+ stop<span class="token punctuation">)</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">&quot;stop ...&quot;</span>
+        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+ reload<span class="token punctuation">)</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">&quot;reload...&quot;</span>
+        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+ *<span class="token punctuation">)</span>
+        <span class="token builtin class-name">echo</span> <span class="token string">&quot;Usage: <span class="token variable">$name</span> [start|stop|reload]&quot;</span>
+        <span class="token builtin class-name">exit</span> <span class="token number">1</span>
+        <span class="token punctuation">;</span><span class="token punctuation">;</span>
+<span class="token keyword">esac</span>
+<span class="token builtin class-name">exit</span> <span class="token number">0</span>
+</code></pre>
+<h2 id="3-&#x7EC4;&#x5408;&#x8868;&#x8FBE;&#x5F0F;"><a name="3-&#x7EC4;&#x5408;&#x8868;&#x8FBE;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#3-&#x7EC4;&#x5408;&#x8868;&#x8FBE;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x7EC4;&#x5408;&#x8868;&#x8FBE;&#x5F0F;</h2>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[ ! EXPR ]</td>
+<td>&#x5982;&#x679C;EXPR&#x4E3A;&#x5047;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;.</td>
+</tr>
+<tr>
+<td>[ ( EXPR ) ]</td>
+<td>&#x8FD4;&#x56DE;EXPR&#x7684;&#x503C;&#x3002;&#x8FD9;&#x53EF;&#x7528;&#x4E8E;&#x8986;&#x76D6;&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x6B63;&#x5E38;&#x4F18;&#x5148;&#x7EA7;.</td>
+</tr>
+<tr>
+<td>[ EXPR1 -a EXPR2 ]</td>
+<td>&#x5982;&#x679C;EXPR1&#x548C;EXPR2&#x90FD;&#x4E3A;&#x771F;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+<tr>
+<td>[ EXPR1 -o EXPR2 ]</td>
+<td>&#x5982;&#x679C;EXPR1&#x6216;EXPR2&#x4E3A;&#x771F;&#xFF0C;&#x5219;&#x4E3A;&#x771F;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x53C2;&#x8003;&#xFF1A;</p>
+<ul>
+<li><a href="https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html" target="_blank">Introduction to if</a></li>
+<li><a href="https://www.geeksforgeeks.org/conditional-statements-shell-script/" target="_blank">Conditional Statements | Shell Script</a></li>
+</ul>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; ghostwritten &#x6D59;ICP&#x5907;2020032454&#x53F7; 2022 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-06-16 16:30:57
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="shell_command_return.html" class="navigation navigation-prev " aria-label="Previous page: shell 命令返回值判断">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="shell_while_getopts.html" class="navigation navigation-next " aria-label="Next page: shell while getopts">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"shell 判断","level":"1.3.9","depth":2,"next":{"title":"shell while getopts","level":"1.3.10","depth":2,"path":"Base/shell_while_getopts.md","ref":"Base/shell_while_getopts.md","articles":[]},"previous":{"title":"shell 命令返回值判断","level":"1.3.8","depth":2,"path":"Base/shell_command_return.md","ref":"Base/shell_command_return.md","articles":[]},"dir":"ltr"},"config":{"plugins":["3-ba","accordion","advanced-emoji","anchor-navigation-ex","baidu-tongji","code","change_girls","custom-favicon","donate","chapter-fold","edit-link","flexible-alerts","github-buttons","github","insert-logo","musicxml","prism","prism-themes","pageview-count","-highlight","-search","-lunr","rss","search-plus","splitter","-sharing","sharing-plus","sidebar-style","theme-default","tags","tbfed-pagefooter"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"sidebar-style":{"author":"zongxun","title":"《Shell Docs》"},"tbfed-pagefooter":{"copyright":"Copyright &copy ghostwritten 浙ICP备2020032454号 2022","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-holi-theme.css"],"lang":{"shell":"bash"}},"github":{"url":"https://github.com/Ghostwritten"},"baidu-tongji":{"url":"https://hm.baidu.com/hm.js","token":"55e7dfe47f4dc1c018d4042fdfa62565"},"splitter":{},"change_girls":{"time":10,"urls":["https://pic4.zhimg.com/80/v2-e4d7fa3a96aa4a3740d91a313b2c5f5b_1440w.jpg","https://pic4.zhimg.com/80/v2-598a1ab3ffa3db75f7430ff012eef7a3_1440w.jpg","https://pic2.zhimg.com/80/v2-cb16b2e936a7ee03466afcb02d9b56d1_1440w.jpg","https://pic4.zhimg.com/80/v2-b99b00a18858c8a1d73068f534c5d85b_1440w.jpg","https://pic1.zhimg.com/80/v2-4f155317a55a878b05c000ff80add4f8_1440w.jpg","https://pic1.zhimg.com/80/v2-6cf80eabe444ffc4d4da73b1f1ae56b0_1440w.jpg"]},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"donate":{"alipay":"https://github.com/Ghostwritten/shell-docs/blob/gh-pages/assets/imgs/aplipay.png?raw=true","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://github.com/Ghostwritten/shell-docs/blob/gh-pages/assets/imgs/wechat.png?raw=true","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"Gitbook Docs","description":"This is the best book ever.","author":"Zong Xun","feed_url":"http://smoothies.com.cn/rss","site_url":"https://smoothies.com.cn/shell-docs/","managingEditor":"writer@smoothies.com.cn (Zong Xun)","webMaster":"webmaster@smoothies.com.cn (Zong Xun)"},"musicxml":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":"assets/imgs/1_girl.ico","pageview-count":{},"prism-themes":{},"github-buttons":{"buttons":[{"user":"Ghostwritten","repo":"shell-docs","type":"star","count":true,"size":"small"}]},"custom-favicon":{},"tags":{"placement":"top"},"3-ba":{"configuration":"auto","token":"9ffc0dce8d7079aceab6b0bc18eb626b"},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Danger"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper"],"douban":false,"facebook":true,"weibo":false,"twitter":true,"pocket":false,"google":false,"qzone":false},"edit-link":{"label":"Edit","base":"https://github.com/Ghostwritten/shell-docs/edit/master/"},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"insert-logo":{"style":"background: none; max-height: 100px; min-height: 100px","url":"https://img-blog.csdnimg.cn/e10caf2bc4a94aaea5b4fde70392fd0c.png"},"search-plus":{}},"theme":"default","author":"宗勋 - zongxun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Shell Docs","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Docker":"https://smoothies.com.cn/docker-docs/Overview.html","Blog":"https://smoothies.com.cn","Kubernetes":"https://smoothies.com.cn/kubernetes-docs/Overview.html","Go":"https://smoothies.com.cn/go-docs/Overview.html","Prometheus":"https://smoothies.com.cn/prometheus-docs/Overview.html","Command":"https://smoothies.com.cn/linux-command-docs/Overview.html","Javascript":"https://smoothies.com.cn/javascript-docs/Overview.html","Shell":"https://smoothies.com.cn/shell-docs/Overview.html","Linux":"https://smoothies.com.cn/linux-docs/Overview.html","Gitbook":"https://smoothies.com.cn/gitbook-docs/Overview.html","Python":"https://smoothies.com.cn/python-docs/Overview.html","Exam":"https://ghostwritten.gitbook.io/kubernetes-exam-in-action/"}},"gitbook":"*","description":"这是一本关于 [Shell](https://zh.m.wikipedia.org/zh/Unix_shell) 的书籍"},"file":{"path":"Base/shell_control_condition.md","mtime":"2022-06-16T16:30:57.197Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-16T08:58:25.363Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-baidu-tongji/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-change_girls/girls.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-musicxml/osmd.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-musicxml/musicxml.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-musicxml/promise.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sidebar-style/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

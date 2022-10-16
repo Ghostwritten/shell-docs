@@ -1,0 +1,1584 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>shell 报告服务器信息 · Shell Docs</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="宗勋 - zongxun">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-change_girls/girls.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-holi-theme.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-sidebar-style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tags/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="shell_disk.html" />
+    
+    
+    <link rel="prev" href="shell_fileOrdir_state.html" />
+    
+
+    <link href="http://smoothies.com.cn/rss" title="Gitbook Docs" rel="alternate" type="application/rss+xml" />
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"Ghostwritten","repo":"shell-docs","type":"star","count":true,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/docker-docs/Overview.html" target="_blank" class="custom-link">Docker</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn" target="_blank" class="custom-link">Blog</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/kubernetes-docs/Overview.html" target="_blank" class="custom-link">Kubernetes</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/go-docs/Overview.html" target="_blank" class="custom-link">Go</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/prometheus-docs/Overview.html" target="_blank" class="custom-link">Prometheus</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/linux-command-docs/Overview.html" target="_blank" class="custom-link">Command</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/javascript-docs/Overview.html" target="_blank" class="custom-link">Javascript</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/shell-docs/Overview.html" target="_blank" class="custom-link">Shell</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/linux-docs/Overview.html" target="_blank" class="custom-link">Linux</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/gitbook-docs/Overview.html" target="_blank" class="custom-link">Gitbook</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/python-docs/Overview.html" target="_blank" class="custom-link">Python</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://ghostwritten.gitbook.io/kubernetes-exam-in-action/" target="_blank" class="custom-link">Exam</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../Overview.html">
+            
+                <a href="../../Overview.html">
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    序言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../Base/">
+            
+                <a href="../../Base/">
+            
+                    
+                    Base
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../Base/shell_set.html">
+            
+                <a href="../../Base/shell_set.html">
+            
+                    
+                    shell set 命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../Base/shell_wildcard_expansion.html">
+            
+                <a href="../../Base/shell_wildcard_expansion.html">
+            
+                    
+                    shell 通配符扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../Base/shell_dollar_string.html">
+            
+                <a href="../../Base/shell_dollar_string.html">
+            
+                    
+                    shell dollar 字符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../Base/shell_default_parameter.html">
+            
+                <a href="../../Base/shell_default_parameter.html">
+            
+                    
+                    shell 默认参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../Base/shell_command_wait.html">
+            
+                <a href="../../Base/shell_command_wait.html">
+            
+                    
+                    shell wait 等待命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../Base/shell_IFS.html">
+            
+                <a href="../../Base/shell_IFS.html">
+            
+                    
+                    shell ifs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../../Base/shell_quotes_and_escaping.html">
+            
+                <a href="../../Base/shell_quotes_and_escaping.html">
+            
+                    
+                    shell 引号和转义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../../Base/shell_command_return.html">
+            
+                <a href="../../Base/shell_command_return.html">
+            
+                    
+                    shell 命令返回值判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../../Base/shell_control_condition.html">
+            
+                <a href="../../Base/shell_control_condition.html">
+            
+                    
+                    shell 判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../../Base/shell_while_getopts.html">
+            
+                <a href="../../Base/shell_while_getopts.html">
+            
+                    
+                    shell while getopts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../../Base/shell_command_line.html">
+            
+                <a href="../../Base/shell_command_line.html">
+            
+                    
+                    shell 命令行操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../../Base/shell_loop.html">
+            
+                <a href="../../Base/shell_loop.html">
+            
+                    
+                    shell 循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../../Base/shell_tmp_file_or_dir.html">
+            
+                <a href="../../Base/shell_tmp_file_or_dir.html">
+            
+                    
+                    shell 创建临时文件 目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../../Base/shell_command_sleep.html">
+            
+                <a href="../../Base/shell_command_sleep.html">
+            
+                    
+                    shell sleep 睡眠
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../../Base/shell_multithread_script.html">
+            
+                <a href="../../Base/shell_multithread_script.html">
+            
+                    
+                    shell 多线程脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../../Base/shell_array.html">
+            
+                <a href="../../Base/shell_array.html">
+            
+                    
+                    shell 数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="../../Base/shell_Cross-script_variable_declaration.html">
+            
+                <a href="../../Base/shell_Cross-script_variable_declaration.html">
+            
+                    
+                    shell 跨脚本变量传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="../../Base/shell_help.html">
+            
+                <a href="../../Base/shell_help.html">
+            
+                    
+                    shell 查看帮助
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="../../Base/shell_operator.html">
+            
+                <a href="../../Base/shell_operator.html">
+            
+                    
+                    shell 运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="../../Base/shell_variable.html">
+            
+                <a href="../../Base/shell_variable.html">
+            
+                    
+                    shell 变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21" data-path="../../Base/shell_function.html">
+            
+                <a href="../../Base/shell_function.html">
+            
+                    
+                    shell 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22" data-path="../../Base/shell_log_and_print.html">
+            
+                <a href="../../Base/shell_log_and_print.html">
+            
+                    
+                    shell 日志与打印输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Case
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Monitor
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="shell_fileOrdir_state.html">
+            
+                <a href="shell_fileOrdir_state.html">
+            
+                    
+                    shell 判断文件 目录状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.1.2" data-path="shell_os_message2.html">
+            
+                <a href="shell_os_message2.html">
+            
+                    
+                    shell 报告服务器信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="shell_disk.html">
+            
+                <a href="shell_disk.html">
+            
+                    
+                    shell 磁盘空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="shell_weather.html">
+            
+                <a href="shell_weather.html">
+            
+                    
+                    shell 天气预报
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="shell_CPU.html">
+            
+                <a href="shell_CPU.html">
+            
+                    
+                    shell cpu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="shell_hardware.html">
+            
+                <a href="shell_hardware.html">
+            
+                    
+                    shell 硬件信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="shell_get_ip_address.html">
+            
+                <a href="shell_get_ip_address.html">
+            
+                    
+                    shell 获取 ip 位置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="shell_os_message.html">
+            
+                <a href="shell_os_message.html">
+            
+                    
+                    shell 显示系统信息菜单
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../shell_hello_world.html">
+            
+                <a href="../shell_hello_world.html">
+            
+                    
+                    hello world
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Math/">
+            
+                <a href="../Math/">
+            
+                    
+                    Math
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Math/shell_subtraction.html">
+            
+                <a href="../Math/shell_subtraction.html">
+            
+                    
+                    shell 减法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Math/shell_Multiplication.html">
+            
+                <a href="../Math/shell_Multiplication.html">
+            
+                    
+                    shell 乘法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../Math/shell_rock-paper-scissors.html">
+            
+                <a href="../Math/shell_rock-paper-scissors.html">
+            
+                    
+                    shell 石头剪刀布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../Math/shell_compare.html">
+            
+                <a href="../Math/shell_compare.html">
+            
+                    
+                    shell  比较大小
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.5" data-path="../Math/shell_addition.html">
+            
+                <a href="../Math/shell_addition.html">
+            
+                    
+                    shell 加法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Game/">
+            
+                <a href="../Game/">
+            
+                    
+                    Game
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Game/shell_lottery.html">
+            
+                <a href="../Game/shell_lottery.html">
+            
+                    
+                    shell 模拟抽奖
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Art/">
+            
+                <a href="../Art/">
+            
+                    
+                    Art
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../Art/shell_spinner_loading.html">
+            
+                <a href="../Art/shell_spinner_loading.html">
+            
+                    
+                    shell 微调加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="../Art/shell_diamond.html">
+            
+                <a href="../Art/shell_diamond.html">
+            
+                    
+                    shell 菱形图案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="../Art/shell_upper_lower.html">
+            
+                <a href="../Art/shell_upper_lower.html">
+            
+                    
+                    shell  大小写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="../Art/shell_color.html">
+            
+                <a href="../Art/shell_color.html">
+            
+                    
+                    shell 颜色输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../shell_command_return.html">
+            
+                <a href="../shell_command_return.html">
+            
+                    
+                    shell 命令输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../shell_read.html">
+            
+                <a href="../shell_read.html">
+            
+                    
+                    shell 简单交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../Task/">
+            
+                <a href="../Task/">
+            
+                    
+                    Task
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.8.1" data-path="../Task/shell_mount.html">
+            
+                <a href="../Task/shell_mount.html">
+            
+                    
+                    shell 挂载目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.2" data-path="../Task/shell_change_files.html">
+            
+                <a href="../Task/shell_change_files.html">
+            
+                    
+                    shell 批量修改文件名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.3" data-path="../Task/shell_moveup_dir.html">
+            
+                <a href="../Task/shell_moveup_dir.html">
+            
+                    
+                    shell 上移目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.4" data-path="../Task/shell_clean_log.html">
+            
+                <a href="../Task/shell_clean_log.html">
+            
+                    
+                    shell 清理日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >shell 报告服务器信息</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#shell-&#x62A5;&#x544A;&#x670D;&#x52A1;&#x5668;&#x4FE1;&#x606F;"><b></b>Shell &#x62A5;&#x544A;&#x670D;&#x52A1;&#x5668;&#x4FE1;&#x606F;</a></li></ul></div><a href="#shell-&#x62A5;&#x544A;&#x670D;&#x52A1;&#x5668;&#x4FE1;&#x606F;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="shell-&#x62A5;&#x544A;&#x670D;&#x52A1;&#x5668;&#x4FE1;&#x606F;"><a name="shell-&#x62A5;&#x544A;&#x670D;&#x52A1;&#x5668;&#x4FE1;&#x606F;" class="anchor-navigation-ex-anchor" href="#shell-&#x62A5;&#x544A;&#x670D;&#x52A1;&#x5668;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>Shell &#x62A5;&#x544A;&#x670D;&#x52A1;&#x5668;&#x4FE1;&#x606F;</h1><!-- tags --><div id="tags" class="tags"><p><i class="fa fa-tags" aria-hidden="true"></i> <a href="../../tags.html#&#x76D1;&#x63A7;">&#x76D1;&#x63A7;</a></p></div><!-- tagsstop --><ul>
+<li><code>server-health.sh</code></li>
+</ul>
+<pre class="language-"><code class="lang-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token function">date</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;uptime:&quot;</span>
+<span class="token function">uptime</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Currently connected:&quot;</span>
+w
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;--------------------&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Last logins:&quot;</span>
+last -a <span class="token operator">|</span> <span class="token function">head</span> -3
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;--------------------&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Disk and memory usage:&quot;</span>
+<span class="token function">df</span> -h <span class="token operator">|</span> <span class="token function">xargs</span> <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">&apos;{print &quot;Free/total disk: &quot; $11 &quot; / &quot; $9}&apos;</span>
+<span class="token function">free</span> -m <span class="token operator">|</span> <span class="token function">xargs</span> <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">&apos;{print &quot;Free/total memory: &quot; $17 &quot; / &quot; $8 &quot; MB&quot;}&apos;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;--------------------&quot;</span>
+<span class="token assign-left variable">start_log</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">head</span> -1 /var/log/messages <span class="token operator">|</span> <span class="token function">cut</span> -c <span class="token number">1</span>-12<span class="token variable">)</span></span>
+<span class="token assign-left variable">oom</span><span class="token operator">=</span><span class="token variable"><span class="token variable">$(</span><span class="token function">grep</span> -ci <span class="token function">kill</span> /var/log/messages<span class="token variable">)</span></span>
+<span class="token builtin class-name">echo</span> -n <span class="token string">&quot;OOM errors since <span class="token variable">$start_log</span> :&quot;</span> <span class="token variable">$oom</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;--------------------&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Utilization and most expensive processes:&quot;</span>
+<span class="token function">top</span> -b <span class="token operator">|</span> <span class="token function">head</span> -3
+<span class="token builtin class-name">echo</span>
+<span class="token function">top</span> -b <span class="token operator">|</span> <span class="token function">head</span> -10 <span class="token operator">|</span> <span class="token function">tail</span> -4
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;--------------------&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Open TCP ports:&quot;</span>
+nmap -p -T4 <span class="token number">127.0</span>.0.1
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;--------------------&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;Current connections:&quot;</span>
+ss -s
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;--------------------&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;processes:&quot;</span>
+<span class="token function">ps</span> auxf --width<span class="token operator">=</span><span class="token number">200</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;--------------------&quot;</span>
+<span class="token builtin class-name">echo</span> <span class="token string">&quot;vmstat:&quot;</span>
+<span class="token function">vmstat</span> <span class="token number">1</span> <span class="token number">5</span>
+</code></pre>
+<p>&#x6267;&#x884C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-bash">$  <span class="token function">bash</span> server-health.sh
+Tue Jun  <span class="token number">7</span> <span class="token number">16</span>:12:17 UTC <span class="token number">2022</span>
+uptime:
+ <span class="token number">16</span>:12:17 up <span class="token number">1</span> day, <span class="token number">20</span>:24,  <span class="token number">2</span> users,  load average: <span class="token number">1.61</span>, <span class="token number">1.61</span>, <span class="token number">1.63</span>
+Currently connected:
+ <span class="token number">16</span>:12:17 up <span class="token number">1</span> day, <span class="token number">20</span>:24,  <span class="token number">2</span> users,  load average: <span class="token number">1.61</span>, <span class="token number">1.61</span>, <span class="token number">1.63</span>
+<span class="token environment constant">USER</span>     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+root     tty1     -                Mon15   <span class="token number">24</span>:26m  <span class="token number">0</span>.66s  <span class="token number">0</span>.03s -bash
+root     pts/0    <span class="token number">192.168</span>.211.1    02:54    <span class="token number">1</span>.00s  <span class="token number">1</span>.23s  <span class="token number">0</span>.01s w
+--------------------
+Last logins:
+root     pts/0        Tue Jun  <span class="token number">7</span> 02:54   still logged <span class="token keyword">in</span>    <span class="token number">192.168</span>.211.1
+root     pts/4        Mon Jun  <span class="token number">6</span> <span class="token number">15</span>:45 - <span class="token number">20</span>:15  <span class="token punctuation">(</span>04:29<span class="token punctuation">)</span>     <span class="token number">192.168</span>.211.1
+root     tty1         Mon Jun  <span class="token number">6</span> <span class="token number">15</span>:45   still logged <span class="token keyword">in</span>
+--------------------
+Disk and memory usage:
+Free/total disk: <span class="token number">3</span>.6G / <span class="token number">3</span>.6G
+Free/total memory: <span class="token number">0</span> / <span class="token number">7411</span> MB
+--------------------
+OOM errors since Jun  <span class="token number">5</span> <span class="token number">11</span>:55 <span class="token builtin class-name">:</span> <span class="token number">0</span>
+--------------------
+Utilization and <span class="token function">most</span> expensive processes:
+<span class="token function">top</span> - <span class="token number">16</span>:12:17 up <span class="token number">1</span> day, <span class="token number">20</span>:24,  <span class="token number">2</span> users,  load average: <span class="token number">1.61</span>, <span class="token number">1.61</span>, <span class="token number">1.63</span>
+Tasks: <span class="token number">295</span> total,   <span class="token number">2</span> running, <span class="token number">195</span> sleeping,   <span class="token number">0</span> stopped,   <span class="token number">0</span> zombie
+%Cpu<span class="token punctuation">(</span>s<span class="token punctuation">)</span>: <span class="token number">20.0</span> us,  <span class="token number">8.7</span> sy,  <span class="token number">0.0</span> ni, <span class="token number">70.9</span> id,  <span class="token number">0.0</span> wa,  <span class="token number">0.0</span> hi,  <span class="token number">0.5</span> si,  <span class="token number">0.0</span> st
+
+   PID <span class="token environment constant">USER</span>      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND
+ <span class="token number">71469</span> <span class="token number">998</span>       <span class="token number">20</span>   <span class="token number">0</span>  <span class="token number">152880</span>  <span class="token number">69196</span>  <span class="token number">12508</span> R <span class="token number">100.0</span>  <span class="token number">0.9</span>   <span class="token number">0</span>:04.19 bundle
+  <span class="token number">3160</span> <span class="token number">998</span>       <span class="token number">20</span>   <span class="token number">0</span> <span class="token number">1438356</span> <span class="token number">892316</span>  <span class="token number">25176</span> S  <span class="token number">17.6</span> <span class="token number">11.8</span> <span class="token number">474</span>:58.71 bundle
+     <span class="token number">8</span> root      <span class="token number">20</span>   <span class="token number">0</span>       <span class="token number">0</span>      <span class="token number">0</span>      <span class="token number">0</span> I  <span class="token number">11.8</span>  <span class="token number">0.0</span>  <span class="token number">29</span>:12.26 rcu_sched
+--------------------
+Open TCP ports:
+server-health.sh: line <span class="token number">26</span>: nmap: <span class="token builtin class-name">command</span> not found
+--------------------
+Current connections:
+Total: <span class="token number">1543</span> <span class="token punctuation">(</span>kernel <span class="token number">6994</span><span class="token punctuation">)</span>
+TCP:   <span class="token number">29</span> <span class="token punctuation">(</span>estab <span class="token number">2</span>, closed <span class="token number">17</span>, orphaned <span class="token number">0</span>, synrecv <span class="token number">0</span>, timewait <span class="token number">0</span>/0<span class="token punctuation">)</span>, ports <span class="token number">0</span>
+
+Transport Total     IP        IPv6
+*         <span class="token number">6994</span>      -         -        
+RAW       <span class="token number">1</span>         <span class="token number">0</span>         <span class="token number">1</span>        
+UDP       <span class="token number">3</span>         <span class="token number">2</span>         <span class="token number">1</span>        
+TCP       <span class="token number">12</span>        <span class="token number">11</span>        <span class="token number">1</span>        
+INET      <span class="token number">16</span>        <span class="token number">13</span>        <span class="token number">3</span>        
+FRAG      <span class="token number">0</span>         <span class="token number">0</span>         <span class="token number">0</span>        
+
+--------------------
+processes:
+<span class="token environment constant">USER</span>        PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root          <span class="token number">2</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00 <span class="token punctuation">[</span>kthreadd<span class="token punctuation">]</span>
+root          <span class="token number">4</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kworker/0:0H<span class="token punctuation">]</span>
+root          <span class="token number">6</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>mm_percpu_wq<span class="token punctuation">]</span>
+root          <span class="token number">7</span>  <span class="token number">0.1</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">3</span>:19  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>ksoftirqd/0<span class="token punctuation">]</span>
+root          <span class="token number">8</span>  <span class="token number">1.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I    Jun05  <span class="token number">29</span>:12  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>rcu_sched<span class="token punctuation">]</span>
+root          <span class="token number">9</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>rcu_bh<span class="token punctuation">]</span>
+root         <span class="token number">10</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>migration/0<span class="token punctuation">]</span>
+root         <span class="token number">11</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>watchdog/0<span class="token punctuation">]</span>
+root         <span class="token number">12</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>cpuhp/0<span class="token punctuation">]</span>
+root         <span class="token number">13</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>cpuhp/1<span class="token punctuation">]</span>
+root         <span class="token number">14</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>watchdog/1<span class="token punctuation">]</span>
+root         <span class="token number">15</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>migration/1<span class="token punctuation">]</span>
+root         <span class="token number">16</span>  <span class="token number">0.1</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">4</span>:01  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>ksoftirqd/1<span class="token punctuation">]</span>
+root         <span class="token number">18</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kworker/1:0H<span class="token punctuation">]</span>
+root         <span class="token number">19</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>cpuhp/2<span class="token punctuation">]</span>
+root         <span class="token number">20</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:01  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>watchdog/2<span class="token punctuation">]</span>
+root         <span class="token number">21</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>migration/2<span class="token punctuation">]</span>
+root         <span class="token number">22</span>  <span class="token number">0.1</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">3</span>:40  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>ksoftirqd/2<span class="token punctuation">]</span>
+root         <span class="token number">24</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kworker/2:0H<span class="token punctuation">]</span>
+root         <span class="token number">25</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>cpuhp/3<span class="token punctuation">]</span>
+root         <span class="token number">26</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>watchdog/3<span class="token punctuation">]</span>
+root         <span class="token number">27</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>migration/3<span class="token punctuation">]</span>
+root         <span class="token number">28</span>  <span class="token number">0.1</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">3</span>:30  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>ksoftirqd/3<span class="token punctuation">]</span>
+root         <span class="token number">30</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kworker/3:0H<span class="token punctuation">]</span>
+root         <span class="token number">31</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kdevtmpfs<span class="token punctuation">]</span>
+root         <span class="token number">32</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>netns<span class="token punctuation">]</span>
+root         <span class="token number">33</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>rcu_tasks_kthre<span class="token punctuation">]</span>
+root         <span class="token number">34</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kauditd<span class="token punctuation">]</span>
+root         <span class="token number">36</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>khungtaskd<span class="token punctuation">]</span>
+root         <span class="token number">37</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>oom_reaper<span class="token punctuation">]</span>
+root         <span class="token number">38</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>writeback<span class="token punctuation">]</span>
+root         <span class="token number">39</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kcompactd0<span class="token punctuation">]</span>
+root         <span class="token number">40</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        SN   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>ksmd<span class="token punctuation">]</span>
+root         <span class="token number">41</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        SN   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>khugepaged<span class="token punctuation">]</span>
+root         <span class="token number">42</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>crypto<span class="token punctuation">]</span>
+root         <span class="token number">43</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kintegrityd<span class="token punctuation">]</span>
+root         <span class="token number">44</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kblockd<span class="token punctuation">]</span>
+root         <span class="token number">45</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I    Jun05   <span class="token number">1</span>:17  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kworker/2:1<span class="token punctuation">]</span>
+root         <span class="token number">46</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>ata_sff<span class="token punctuation">]</span>
+root         <span class="token number">47</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>md<span class="token punctuation">]</span>
+root         <span class="token number">48</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>edac-poller<span class="token punctuation">]</span>
+root         <span class="token number">49</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>devfreq_wq<span class="token punctuation">]</span>
+root         <span class="token number">50</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>watchdogd<span class="token punctuation">]</span>
+root         <span class="token number">55</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kswapd0<span class="token punctuation">]</span>
+root         <span class="token number">56</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kworker/u257:0<span class="token punctuation">]</span>
+root         <span class="token number">57</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>ecryptfs-kthrea<span class="token punctuation">]</span>
+root         <span class="token number">99</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kthrotld<span class="token punctuation">]</span>
+root        <span class="token number">100</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>acpi_thermal_pm<span class="token punctuation">]</span>
+root        <span class="token number">101</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_0<span class="token punctuation">]</span>
+root        <span class="token number">102</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_0<span class="token punctuation">]</span>
+root        <span class="token number">103</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_1<span class="token punctuation">]</span>
+root        <span class="token number">104</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_1<span class="token punctuation">]</span>
+root        <span class="token number">110</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>ipv6_addrconf<span class="token punctuation">]</span>
+root        <span class="token number">119</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kstrp<span class="token punctuation">]</span>
+root        <span class="token number">136</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>charger_manager<span class="token punctuation">]</span>
+root        <span class="token number">203</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>mpt_poll_0<span class="token punctuation">]</span>
+root        <span class="token number">205</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>mpt/0<span class="token punctuation">]</span>
+root        <span class="token number">207</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_2<span class="token punctuation">]</span>
+root        <span class="token number">208</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_2<span class="token punctuation">]</span>
+root        <span class="token number">209</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>ttm_swap<span class="token punctuation">]</span>
+root        <span class="token number">210</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>irq/16-vmwgfx<span class="token punctuation">]</span>
+root        <span class="token number">211</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_3<span class="token punctuation">]</span>
+root        <span class="token number">212</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_3<span class="token punctuation">]</span>
+root        <span class="token number">213</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_4<span class="token punctuation">]</span>
+root        <span class="token number">214</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_4<span class="token punctuation">]</span>
+root        <span class="token number">215</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_5<span class="token punctuation">]</span>
+root        <span class="token number">216</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_5<span class="token punctuation">]</span>
+root        <span class="token number">217</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_6<span class="token punctuation">]</span>
+root        <span class="token number">218</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_6<span class="token punctuation">]</span>
+root        <span class="token number">219</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_7<span class="token punctuation">]</span>
+root        <span class="token number">220</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_7<span class="token punctuation">]</span>
+root        <span class="token number">221</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_8<span class="token punctuation">]</span>
+root        <span class="token number">222</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_8<span class="token punctuation">]</span>
+root        <span class="token number">223</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_9<span class="token punctuation">]</span>
+root        <span class="token number">224</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_9<span class="token punctuation">]</span>
+root        <span class="token number">225</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_10<span class="token punctuation">]</span>
+root        <span class="token number">226</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_10<span class="token punctuation">]</span>
+root        <span class="token number">227</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_11<span class="token punctuation">]</span>
+root        <span class="token number">228</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_11<span class="token punctuation">]</span>
+root        <span class="token number">229</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_12<span class="token punctuation">]</span>
+root        <span class="token number">230</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_12<span class="token punctuation">]</span>
+root        <span class="token number">231</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_13<span class="token punctuation">]</span>
+root        <span class="token number">232</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_13<span class="token punctuation">]</span>
+root        <span class="token number">233</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_14<span class="token punctuation">]</span>
+root        <span class="token number">234</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_14<span class="token punctuation">]</span>
+root        <span class="token number">235</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_15<span class="token punctuation">]</span>
+root        <span class="token number">236</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_15<span class="token punctuation">]</span>
+root        <span class="token number">237</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_16<span class="token punctuation">]</span>
+root        <span class="token number">238</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_16<span class="token punctuation">]</span>
+root        <span class="token number">239</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_17<span class="token punctuation">]</span>
+root        <span class="token number">240</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_17<span class="token punctuation">]</span>
+root        <span class="token number">241</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_18<span class="token punctuation">]</span>
+root        <span class="token number">242</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_18<span class="token punctuation">]</span>
+root        <span class="token number">243</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_19<span class="token punctuation">]</span>
+root        <span class="token number">244</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_19<span class="token punctuation">]</span>
+root        <span class="token number">245</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_20<span class="token punctuation">]</span>
+root        <span class="token number">246</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_20<span class="token punctuation">]</span>
+root        <span class="token number">247</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_21<span class="token punctuation">]</span>
+root        <span class="token number">248</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_21<span class="token punctuation">]</span>
+root        <span class="token number">249</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_22<span class="token punctuation">]</span>
+root        <span class="token number">250</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_22<span class="token punctuation">]</span>
+root        <span class="token number">251</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_23<span class="token punctuation">]</span>
+root        <span class="token number">252</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_23<span class="token punctuation">]</span>
+root        <span class="token number">253</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_24<span class="token punctuation">]</span>
+root        <span class="token number">254</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_24<span class="token punctuation">]</span>
+root        <span class="token number">255</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_25<span class="token punctuation">]</span>
+root        <span class="token number">256</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_25<span class="token punctuation">]</span>
+root        <span class="token number">257</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_26<span class="token punctuation">]</span>
+root        <span class="token number">258</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_26<span class="token punctuation">]</span>
+root        <span class="token number">259</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_27<span class="token punctuation">]</span>
+root        <span class="token number">260</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_27<span class="token punctuation">]</span>
+root        <span class="token number">261</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_28<span class="token punctuation">]</span>
+root        <span class="token number">262</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_28<span class="token punctuation">]</span>
+root        <span class="token number">263</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_29<span class="token punctuation">]</span>
+root        <span class="token number">264</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_29<span class="token punctuation">]</span>
+root        <span class="token number">265</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_30<span class="token punctuation">]</span>
+root        <span class="token number">266</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_30<span class="token punctuation">]</span>
+root        <span class="token number">267</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_31<span class="token punctuation">]</span>
+root        <span class="token number">268</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_31<span class="token punctuation">]</span>
+root        <span class="token number">269</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_eh_32<span class="token punctuation">]</span>
+root        <span class="token number">270</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>scsi_tmf_32<span class="token punctuation">]</span>
+root        <span class="token number">303</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:01  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kworker/2:1H<span class="token punctuation">]</span>
+root        <span class="token number">304</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:01  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kworker/3:1H<span class="token punctuation">]</span>
+root        <span class="token number">307</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:02  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kworker/0:1H<span class="token punctuation">]</span>
+root        <span class="token number">312</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:02  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kworker/1:1H<span class="token punctuation">]</span>
+root        <span class="token number">314</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kdmflush<span class="token punctuation">]</span>
+root        <span class="token number">315</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>bioset<span class="token punctuation">]</span>
+root        <span class="token number">321</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kdmflush<span class="token punctuation">]</span>
+root        <span class="token number">323</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>bioset<span class="token punctuation">]</span>
+root        <span class="token number">396</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>raid5wq<span class="token punctuation">]</span>
+root        <span class="token number">443</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:34  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>jbd2/dm-1-8<span class="token punctuation">]</span>
+root        <span class="token number">444</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>ext4-rsv-conver<span class="token punctuation">]</span>
+root        <span class="token number">527</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>iscsi_eh<span class="token punctuation">]</span>
+root        <span class="token number">537</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>ib-comp-wq<span class="token punctuation">]</span>
+root        <span class="token number">538</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>ib-comp-unb-wq<span class="token punctuation">]</span>
+root        <span class="token number">539</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>ib_mcast<span class="token punctuation">]</span>
+root        <span class="token number">540</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>ib_nl_sa_wq<span class="token punctuation">]</span>
+root        <span class="token number">543</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>rdma_cm<span class="token punctuation">]</span>
+root        <span class="token number">599</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kworker/u257:2<span class="token punctuation">]</span>
+root        <span class="token number">759</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>xfsalloc<span class="token punctuation">]</span>
+root        <span class="token number">760</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>xfs_mru_cache<span class="token punctuation">]</span>
+root        <span class="token number">766</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>xfs-buf/dm-0<span class="token punctuation">]</span>
+root        <span class="token number">768</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>xfs-data/dm-0<span class="token punctuation">]</span>
+root        <span class="token number">769</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>xfs-conv/dm-0<span class="token punctuation">]</span>
+root        <span class="token number">770</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>xfs-cil/dm-0<span class="token punctuation">]</span>
+root        <span class="token number">771</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>xfs-reclaim/dm-<span class="token punctuation">]</span>
+root        <span class="token number">777</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>xfs-log/dm-0<span class="token punctuation">]</span>
+root        <span class="token number">778</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>xfs-eofblocks/d<span class="token punctuation">]</span>
+root        <span class="token number">779</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">1</span>:12  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>xfsaild/dm-0<span class="token punctuation">]</span>
+root        <span class="token number">785</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>jbd2/sda2-8<span class="token punctuation">]</span>
+root        <span class="token number">786</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>ext4-rsv-conver<span class="token punctuation">]</span>
+root      <span class="token number">21953</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I    Jun06   <span class="token number">0</span>:55  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kworker/1:0<span class="token punctuation">]</span>
+root      <span class="token number">42411</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I    00:11   <span class="token number">0</span>:36  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kworker/3:1<span class="token punctuation">]</span>
+root      <span class="token number">59695</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I    00:40   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kworker/3:0<span class="token punctuation">]</span>
+root      <span class="token number">54014</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I    07:58   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kworker/1:2<span class="token punctuation">]</span>
+root      <span class="token number">59626</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I    <span class="token number">12</span>:05   <span class="token number">0</span>:02  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kworker/2:2<span class="token punctuation">]</span>
+root      <span class="token number">51576</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I    <span class="token number">15</span>:37   <span class="token number">0</span>:01  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kworker/u256:2<span class="token punctuation">]</span>
+root      <span class="token number">59643</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I    <span class="token number">15</span>:51   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kworker/u256:0<span class="token punctuation">]</span>
+root      <span class="token number">63577</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I    <span class="token number">15</span>:58   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kworker/0:0<span class="token punctuation">]</span>
+root      <span class="token number">66848</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I    <span class="token number">16</span>:04   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kworker/0:2<span class="token punctuation">]</span>
+root      <span class="token number">68181</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I    <span class="token number">16</span>:06   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kworker/u256:1<span class="token punctuation">]</span>
+root      <span class="token number">70068</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I    <span class="token number">16</span>:09   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">[</span>kworker/0:1<span class="token punctuation">]</span>
+root          <span class="token number">1</span>  <span class="token number">0.0</span>  <span class="token number">0.1</span> <span class="token number">160052</span>  <span class="token number">9116</span> ?        Ss   Jun05   <span class="token number">0</span>:21 /sbin/init auto automatic-ubiquity noprompt
+root        <span class="token number">517</span>  <span class="token number">0.0</span>  <span class="token number">0.1</span> <span class="token number">100540</span> <span class="token number">13000</span> ?        S<span class="token operator">&lt;</span>s  Jun05   <span class="token number">0</span>:28 /lib/systemd/systemd-journald
+root        <span class="token number">544</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span> <span class="token number">171444</span>  <span class="token number">1848</span> ?        Ss   Jun05   <span class="token number">0</span>:00 /sbin/lvmetad -f
+root        <span class="token number">547</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">46512</span>  <span class="token number">5008</span> ?        Ss   Jun05   <span class="token number">0</span>:08 /lib/systemd/systemd-udevd
+systemd+    <span class="token number">826</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span> <span class="token number">141780</span>  <span class="token number">3008</span> ?        Ssl  Jun05   <span class="token number">0</span>:01 /lib/systemd/systemd-timesyncd
+root        <span class="token number">894</span>  <span class="token number">0.0</span>  <span class="token number">0.1</span>  <span class="token number">89864</span>  <span class="token number">9972</span> ?        Ss   Jun05   <span class="token number">0</span>:00 /usr/bin/VGAuthService
+root        <span class="token number">896</span>  <span class="token number">0.1</span>  <span class="token number">0.0</span> <span class="token number">143284</span>  <span class="token number">7156</span> ?        S<span class="token operator">&lt;</span>sl Jun05   <span class="token number">4</span>:00 /usr/bin/vmtoolsd
+systemd+    <span class="token number">959</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">71712</span>  <span class="token number">5264</span> ?        Ss   Jun05   <span class="token number">0</span>:02 /lib/systemd/systemd-networkd
+systemd+    <span class="token number">979</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">70604</span>  <span class="token number">6032</span> ?        Ss   Jun05   <span class="token number">0</span>:01 /lib/systemd/systemd-resolved
+root       <span class="token number">1076</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">70444</span>  <span class="token number">5820</span> ?        Ss   Jun05   <span class="token number">0</span>:02 /lib/systemd/systemd-logind
+root       <span class="token number">1079</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">30032</span>  <span class="token number">3168</span> ?        Ss   Jun05   <span class="token number">0</span>:01 /usr/sbin/cron -f
+syslog     <span class="token number">1080</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span> <span class="token number">263044</span>  <span class="token number">5384</span> ?        Ssl  Jun05   <span class="token number">0</span>:38 /usr/sbin/rsyslogd -n
+daemon     <span class="token number">1084</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">28336</span>  <span class="token number">2384</span> ?        Ss   Jun05   <span class="token number">0</span>:00 /usr/sbin/atd -f
+root       <span class="token number">1153</span>  <span class="token number">0.0</span>  <span class="token number">0.1</span> <span class="token number">434328</span>  <span class="token number">9592</span> ?        Ssl  Jun05   <span class="token number">0</span>:00 /usr/sbin/ModemManager --filter-policy<span class="token operator">=</span>strict
+message+   <span class="token number">1156</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">50408</span>  <span class="token number">4704</span> ?        Rs   Jun05   <span class="token number">0</span>:06 /usr/bin/dbus-daemon --system --address<span class="token operator">=</span>systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root       <span class="token number">1189</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">45240</span>  <span class="token number">5484</span> ?        Ss   Jun05   <span class="token number">0</span>:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+root       <span class="token number">1190</span>  <span class="token number">0.0</span>  <span class="token number">0.2</span> <span class="token number">479636</span> <span class="token number">16192</span> ?        Ssl  Jun05   <span class="token number">0</span>:03 /usr/sbin/NetworkManager --no-daemon
+root       <span class="token number">1192</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span> <span class="token number">286248</span>  <span class="token number">6860</span> ?        Ssl  Jun05   <span class="token number">0</span>:02 /usr/lib/accountsservice/accounts-daemon
+root       <span class="token number">1196</span>  <span class="token number">0.1</span>  <span class="token number">0.9</span> <span class="token number">22585756</span> <span class="token number">72012</span> ?      Ssl  Jun05   <span class="token number">3</span>:30 /root/fastgithub_linux-x64/fastgithub
+root       <span class="token number">2051</span>  <span class="token number">0.0</span>  <span class="token number">0.3</span> <span class="token number">712704</span> <span class="token number">24416</span> ?        Sl   Jun05   <span class="token number">1</span>:02  <span class="token punctuation">\</span>_ dnscrypt-proxy/dnscrypt-proxy
+root       <span class="token number">1226</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span> <span class="token number">110556</span>  <span class="token number">2012</span> ?        Ssl  Jun05   <span class="token number">0</span>:09 /usr/sbin/irqbalance --foreground
+root       <span class="token number">1228</span>  <span class="token number">0.0</span>  <span class="token number">0.2</span> <span class="token number">169476</span> <span class="token number">17680</span> ?        Ssl  Jun05   <span class="token number">0</span>:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root       <span class="token number">1230</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span> <span class="token number">531724</span>  <span class="token number">2796</span> ?        Ssl  Jun05   <span class="token number">0</span>:02 /usr/bin/lxcfs /var/lib/lxcfs/
+root       <span class="token number">1293</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span> <span class="token number">288884</span>  <span class="token number">6496</span> ?        Ssl  Jun05   <span class="token number">0</span>:00 /usr/lib/policykit-1/polkitd --no-debug
+root       <span class="token number">1407</span>  <span class="token number">0.0</span>  <span class="token number">0.2</span> <span class="token number">185836</span> <span class="token number">20160</span> ?        Ssl  Jun05   <span class="token number">0</span>:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root       <span class="token number">1426</span>  <span class="token number">0.0</span>  <span class="token number">0.6</span> <span class="token number">1499372</span> <span class="token number">45932</span> ?       Ssl  Jun05   <span class="token number">2</span>:18 /usr/bin/containerd
+root       <span class="token number">1528</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">78872</span>  <span class="token number">3792</span> tty1     Ss   Jun05   <span class="token number">0</span>:00 /bin/login -p --
+root      <span class="token number">51612</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">21500</span>  <span class="token number">5088</span> tty1     S+   Jun06   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ -bash
+root       <span class="token number">1553</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">72304</span>  <span class="token number">5600</span> ?        Ss   Jun05   <span class="token number">0</span>:00 /usr/sbin/sshd -D
+root       <span class="token number">6756</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span> <span class="token number">105692</span>  <span class="token number">7180</span> ?        Ss   02:54   <span class="token number">0</span>:10  <span class="token punctuation">\</span>_ sshd: root@pts/0
+root       <span class="token number">6898</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">21632</span>  <span class="token number">5356</span> pts/0    Ss   02:54   <span class="token number">0</span>:00      <span class="token punctuation">\</span>_ -bash
+root      <span class="token number">90226</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">20392</span>  <span class="token number">4000</span> pts/0    S    05:19   <span class="token number">0</span>:00          <span class="token punctuation">\</span>_ /bin/bash
+root      <span class="token number">91413</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">20388</span>  <span class="token number">4052</span> pts/0    S    05:21   <span class="token number">0</span>:00              <span class="token punctuation">\</span>_ /bin/bash
+root      <span class="token number">91673</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">20388</span>  <span class="token number">3912</span> pts/0    S    05:21   <span class="token number">0</span>:00                  <span class="token punctuation">\</span>_ /bin/bash
+root     <span class="token number">107993</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">20388</span>  <span class="token number">3992</span> pts/0    S    05:50   <span class="token number">0</span>:00                      <span class="token punctuation">\</span>_ /bin/bash
+root     <span class="token number">108274</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">20388</span>  <span class="token number">3944</span> pts/0    S    05:50   <span class="token number">0</span>:00                          <span class="token punctuation">\</span>_ /bin/bash
+root     <span class="token number">108487</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">20388</span>  <span class="token number">3996</span> pts/0    S    05:50   <span class="token number">0</span>:00                              <span class="token punctuation">\</span>_ /bin/bash
+root     <span class="token number">108726</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">20396</span>  <span class="token number">4052</span> pts/0    S    05:51   <span class="token number">0</span>:00                                  <span class="token punctuation">\</span>_ /bin/bash
+root     <span class="token number">108934</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">20388</span>  <span class="token number">3968</span> pts/0    S    05:51   <span class="token number">0</span>:00                                      <span class="token punctuation">\</span>_ /bin/bash
+root     <span class="token number">109714</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">20388</span>  <span class="token number">4040</span> pts/0    S    05:53   <span class="token number">0</span>:00                                          <span class="token punctuation">\</span>_ /bin/bash
+root      <span class="token number">71517</span>  <span class="token number">2.0</span>  <span class="token number">0.0</span>  <span class="token number">11600</span>  <span class="token number">3260</span> pts/0    S+   <span class="token number">16</span>:12   <span class="token number">0</span>:00                                              <span class="token punctuation">\</span>_ <span class="token function">bash</span> server-health.sh
+root      <span class="token number">71542</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">38792</span>  <span class="token number">3956</span> pts/0    R+   <span class="token number">16</span>:12   <span class="token number">0</span>:00                                                  <span class="token punctuation">\</span>_ <span class="token function">ps</span> auxf --width<span class="token operator">=</span><span class="token number">200</span>
+root       <span class="token number">1753</span>  <span class="token number">0.6</span>  <span class="token number">1.0</span> <span class="token number">1644264</span> <span class="token number">83180</span> ?       Ssl  Jun05  <span class="token number">17</span>:52 /usr/bin/dockerd -H fd:// --containerd<span class="token operator">=</span>/run/containerd/containerd.sock
+root       <span class="token number">2272</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span> <span class="token number">1226900</span> <span class="token number">4060</span> ?        Sl   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ /usr/bin/docker-proxy -proto tcp -host-ip <span class="token number">0.0</span>.0.0 -host-port <span class="token number">8081</span> -container-ip <span class="token number">172.17</span>.0.2 -container-port <span class="token number">8081</span>
+root       <span class="token number">2286</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span> <span class="token number">1300888</span> <span class="token number">3748</span> ?        Sl   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ /usr/bin/docker-proxy -proto tcp -host-ip <span class="token number">0.0</span>.0.0 -host-port <span class="token number">2222</span> -container-ip <span class="token number">172.17</span>.0.2 -container-port <span class="token number">22</span>
+root       <span class="token number">2437</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span> <span class="token number">1152912</span> <span class="token number">3964</span> ?        Sl   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ /usr/bin/docker-proxy -proto tcp -host-ip <span class="token number">0.0</span>.0.0 -host-port <span class="token number">27017</span> -container-ip <span class="token number">172.18</span>.0.2 -container-port <span class="token number">27017</span>
+root       <span class="token number">2310</span>  <span class="token number">0.5</span>  <span class="token number">0.1</span> <span class="token number">712852</span> <span class="token number">10512</span> ?        Sl   Jun05  <span class="token number">13</span>:41 /usr/bin/containerd-shim-runc-v2 -namespace moby -id e855e89ccaa42d74c6d074a034ff6092e09b53ca2846875652e70349f0842ff8 -address /run/co
+root       <span class="token number">2357</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">5856</span>  <span class="token number">3416</span> ?        Ss   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ /bin/bash /assets/wrapper
+root       <span class="token number">2737</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2528</span>  <span class="token number">1336</span> ?        S    Jun05   <span class="token number">0</span>:02      <span class="token punctuation">\</span>_ runsvdir -P /opt/gitlab/service log: <span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span><span class="token punctuation">..</span>.
+root       <span class="token number">2746</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2376</span>   <span class="token number">708</span> ?        Ss   Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token punctuation">\</span>_ runsv sshd
+root       <span class="token number">2747</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2520</span>   <span class="token number">708</span> ?        S    Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ svlogd -tt /var/log/gitlab/sshd
+root       <span class="token number">2748</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">12180</span>  <span class="token number">6800</span> ?        S    Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ sshd: /usr/sbin/sshd -D -f /assets/sshd_config -e <span class="token punctuation">[</span>listener<span class="token punctuation">]</span> <span class="token number">0</span> of <span class="token number">100</span>-200 startups
+root       <span class="token number">3032</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2376</span>  <span class="token number">1300</span> ?        Ss   Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token punctuation">\</span>_ runsv <span class="token function">logrotate</span>
+root       <span class="token number">3038</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2520</span>   <span class="token number">640</span> ?        S    Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ svlogd -tt /var/log/gitlab/logrotate
+root      <span class="token number">57801</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2612</span>  <span class="token number">1576</span> ?        Ss   <span class="token number">15</span>:48   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ /bin/sh /opt/gitlab/embedded/bin/gitlab-logrotate-wrapper
+root      <span class="token number">63532</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2512</span>   <span class="token number">588</span> ?        S    <span class="token number">15</span>:58   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>       <span class="token punctuation">\</span>_ <span class="token function">sleep</span> <span class="token number">3000</span>
+root       <span class="token number">3033</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2376</span>   <span class="token number">644</span> ?        Ss   Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token punctuation">\</span>_ runsv redis
+root       <span class="token number">3080</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2520</span>   <span class="token number">640</span> ?        S    Jun05   <span class="token number">0</span>:32      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ svlogd -tt /var/log/gitlab/redis
+<span class="token number">997</span>        <span class="token number">3085</span>  <span class="token number">2.0</span>  <span class="token number">0.1</span>  <span class="token number">66804</span>  <span class="token number">8964</span> ?        Rsl  Jun05  <span class="token number">53</span>:53      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ /opt/gitlab/embedded/bin/redis-server <span class="token number">127.0</span>.0.1:0
+root       <span class="token number">3034</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2376</span>   <span class="token number">708</span> ?        Ss   Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token punctuation">\</span>_ runsv gitaly
+root       <span class="token number">3051</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2520</span>   <span class="token number">704</span> ?        S    Jun05   <span class="token number">0</span>:02      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ svlogd /var/log/gitlab/gitaly
+<span class="token number">998</span>        <span class="token number">3053</span>  <span class="token number">0.0</span>  <span class="token number">0.1</span> <span class="token number">1395004</span> <span class="token number">9096</span> ?        Ssl  Jun05   <span class="token number">0</span>:32      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ /opt/gitlab/embedded/bin/gitaly-wrapper /opt/gitlab/embedded/bin/gitaly /var/opt/gitlab/gitaly/config.toml
+<span class="token number">998</span>        <span class="token number">3117</span>  <span class="token number">0.2</span>  <span class="token number">1.5</span> <span class="token number">1645376</span> <span class="token number">118628</span> ?      Sl   Jun05   <span class="token number">5</span>:47      <span class="token operator">|</span>   <span class="token operator">|</span>       <span class="token punctuation">\</span>_ /opt/gitlab/embedded/bin/gitaly /var/opt/gitlab/gitaly/config.toml
+<span class="token number">998</span>        <span class="token number">3190</span>  <span class="token number">0.2</span>  <span class="token number">1.8</span> <span class="token number">2295408</span> <span class="token number">138420</span> ?      Sl   Jun05   <span class="token number">6</span>:45      <span class="token operator">|</span>   <span class="token operator">|</span>           <span class="token punctuation">\</span>_ ruby /opt/gitlab/embedded/service/gitaly-ruby/bin/gitaly-ruby <span class="token number">363</span> /var/opt/gitlab/gitaly/internal_sockets/ruby
+<span class="token number">998</span>        <span class="token number">3193</span>  <span class="token number">0.2</span>  <span class="token number">1.8</span> <span class="token number">2296468</span> <span class="token number">139760</span> ?      Sl   Jun05   <span class="token number">6</span>:44      <span class="token operator">|</span>   <span class="token operator">|</span>           <span class="token punctuation">\</span>_ ruby /opt/gitlab/embedded/service/gitaly-ruby/bin/gitaly-ruby <span class="token number">363</span> /var/opt/gitlab/gitaly/internal_sockets/ruby
+root       <span class="token number">3035</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2376</span>   <span class="token number">708</span> ?        Ss   Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token punctuation">\</span>_ runsv postgresql
+root       <span class="token number">3079</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2520</span>   <span class="token number">712</span> ?        S    Jun05   <span class="token number">0</span>:03      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ svlogd -tt /var/log/gitlab/postgresql
+<span class="token number">996</span>        <span class="token number">3083</span>  <span class="token number">0.0</span>  <span class="token number">0.2</span>  <span class="token number">34920</span> <span class="token number">19928</span> ?        Ss   Jun05   <span class="token number">0</span>:06      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ /opt/gitlab/embedded/bin/postgres -D /var/opt/gitlab/postgresql/data
+<span class="token number">996</span>        <span class="token number">3141</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">35020</span>  <span class="token number">5376</span> ?        Ss   Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>       <span class="token punctuation">\</span>_ postgres: checkpointer   
+<span class="token number">996</span>        <span class="token number">3142</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">34920</span>  <span class="token number">5236</span> ?        Ss   Jun05   <span class="token number">0</span>:33      <span class="token operator">|</span>   <span class="token operator">|</span>       <span class="token punctuation">\</span>_ postgres: background writer   
+<span class="token number">996</span>        <span class="token number">3143</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">34920</span>  <span class="token number">3780</span> ?        Ss   Jun05   <span class="token number">0</span>:02      <span class="token operator">|</span>   <span class="token operator">|</span>       <span class="token punctuation">\</span>_ postgres: walwriter   
+<span class="token number">996</span>        <span class="token number">3144</span>  <span class="token number">0.1</span>  <span class="token number">0.1</span>  <span class="token number">35612</span>  <span class="token number">8220</span> ?        Ss   Jun05   <span class="token number">4</span>:05      <span class="token operator">|</span>   <span class="token operator">|</span>       <span class="token punctuation">\</span>_ postgres: autovacuum launcher   
+<span class="token number">996</span>        <span class="token number">3145</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">17728</span>  <span class="token number">4460</span> ?        Ss   Jun05   <span class="token number">0</span>:46      <span class="token operator">|</span>   <span class="token operator">|</span>       <span class="token punctuation">\</span>_ postgres: stats collector   
+<span class="token number">996</span>        <span class="token number">3146</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">35456</span>  <span class="token number">6144</span> ?        Ss   Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>       <span class="token punctuation">\</span>_ postgres: logical replication launcher   
+<span class="token number">996</span>       <span class="token number">41229</span>  <span class="token number">0.0</span>  <span class="token number">0.2</span>  <span class="token number">41044</span> <span class="token number">19144</span> ?        Ss   <span class="token number">15</span>:18   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>       <span class="token punctuation">\</span>_ postgres: gitlab gitlabhq_production <span class="token punctuation">[</span>local<span class="token punctuation">]</span> idle
+<span class="token number">996</span>       <span class="token number">41960</span>  <span class="token number">0.0</span>  <span class="token number">0.2</span>  <span class="token number">41024</span> <span class="token number">19180</span> ?        Ss   <span class="token number">15</span>:19   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>       <span class="token punctuation">\</span>_ postgres: gitlab gitlabhq_production <span class="token punctuation">[</span>local<span class="token punctuation">]</span> idle
+<span class="token number">996</span>       <span class="token number">55915</span>  <span class="token number">0.0</span>  <span class="token number">0.1</span>  <span class="token number">37824</span> <span class="token number">13088</span> ?        Ss   <span class="token number">15</span>:45   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>       <span class="token punctuation">\</span>_ postgres: gitlab gitlabhq_production <span class="token punctuation">[</span>local<span class="token punctuation">]</span> idle
+<span class="token number">996</span>       <span class="token number">57956</span>  <span class="token number">0.0</span>  <span class="token number">0.2</span>  <span class="token number">40300</span> <span class="token number">17532</span> ?        Ss   <span class="token number">15</span>:48   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>       <span class="token punctuation">\</span>_ postgres: gitlab gitlabhq_production <span class="token punctuation">[</span>local<span class="token punctuation">]</span> idle
+<span class="token number">996</span>       <span class="token number">66439</span>  <span class="token number">0.0</span>  <span class="token number">0.2</span>  <span class="token number">41044</span> <span class="token number">18680</span> ?        Ss   <span class="token number">16</span>:03   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>       <span class="token punctuation">\</span>_ postgres: gitlab gitlabhq_production <span class="token punctuation">[</span>local<span class="token punctuation">]</span> idle
+<span class="token number">996</span>       <span class="token number">71493</span>  <span class="token number">0.5</span>  <span class="token number">0.1</span>  <span class="token number">37568</span>  <span class="token number">9520</span> ?        Ss   <span class="token number">16</span>:12   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>       <span class="token punctuation">\</span>_ postgres: autovacuum worker   gitlabhq_production
+root       <span class="token number">3036</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2376</span>  <span class="token number">1268</span> ?        Ss   Jun05   <span class="token number">0</span>:01      <span class="token operator">|</span>   <span class="token punctuation">\</span>_ runsv puma
+root       <span class="token number">3054</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2520</span>   <span class="token number">712</span> ?        S    Jun05   <span class="token number">0</span>:17      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ svlogd -tt /var/log/gitlab/puma
+<span class="token number">998</span>       <span class="token number">71469</span>  <span class="token number">105</span>  <span class="token number">0.9</span> <span class="token number">152880</span> <span class="token number">69456</span> ?        Rs   <span class="token number">16</span>:12   <span class="token number">0</span>:04      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ puma <span class="token number">5.3</span>.2 <span class="token punctuation">(</span>unix:///var/opt/gitlab/gitlab-rails/sockets/gitlab.socket,tcp://127.0.0.1:8080<span class="token punctuation">)</span> <span class="token punctuation">[</span>gitlab-puma-worker<span class="token punctuation">]</span>
+root       <span class="token number">3037</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2376</span>   <span class="token number">708</span> ?        Ss   Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token punctuation">\</span>_ runsv sidekiq
+root       <span class="token number">3048</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2520</span>   <span class="token number">704</span> ?        S    Jun05   <span class="token number">1</span>:47      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ svlogd /var/log/gitlab/sidekiq
+<span class="token number">998</span>        <span class="token number">3049</span>  <span class="token number">0.0</span>  <span class="token number">0.4</span> <span class="token number">111308</span> <span class="token number">31144</span> ?        Ssl  Jun05   <span class="token number">0</span>:04      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ ruby /opt/gitlab/embedded/service/gitlab-rails/bin/sidekiq-cluster -e production -r /opt/gitlab/embedded/service/gitla
+<span class="token number">998</span>        <span class="token number">3160</span> <span class="token number">17.8</span> <span class="token number">11.7</span> <span class="token number">1438356</span> <span class="token number">892316</span> ?      Sl   Jun05 <span class="token number">474</span>:58      <span class="token operator">|</span>   <span class="token operator">|</span>       <span class="token punctuation">\</span>_ sidekiq <span class="token number">6.2</span>.2 queues:authorized_project_update:authorized_project_update_project_create,authorized_project_update:
+root       <span class="token number">3039</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2376</span>   <span class="token number">704</span> ?        Ss   Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token punctuation">\</span>_ runsv gitlab-workhorse
+root       <span class="token number">3076</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2520</span>   <span class="token number">640</span> ?        S    Jun05   <span class="token number">0</span>:03      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ svlogd /var/log/gitlab/gitlab-workhorse
+<span class="token number">998</span>        <span class="token number">3077</span>  <span class="token number">0.0</span>  <span class="token number">0.4</span> <span class="token number">1497836</span> <span class="token number">36344</span> ?       Ssl  Jun05   <span class="token number">1</span>:19      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ /opt/gitlab/embedded/bin/gitlab-workhorse -listenNetwork unix -listenUmask <span class="token number">0</span> -listenAddr /var/opt/gitlab/gitlab-workho
+root       <span class="token number">3040</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2376</span>   <span class="token number">708</span> ?        Ss   Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token punctuation">\</span>_ runsv nginx
+root       <span class="token number">3078</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2520</span>   <span class="token number">636</span> ?        S    Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ svlogd -tt /var/log/gitlab/nginx
+root       <span class="token number">3082</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">20116</span>  <span class="token number">6468</span> ?        Ss   Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ nginx: master process /opt/gitlab/embedded/sbin/nginx -p /var/opt/gitlab/nginx
+<span class="token number">999</span>        <span class="token number">3103</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">24368</span>  <span class="token number">6788</span> ?        S    Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>       <span class="token punctuation">\</span>_ nginx: worker process
+<span class="token number">999</span>        <span class="token number">3104</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">24368</span>  <span class="token number">6788</span> ?        S    Jun05   <span class="token number">0</span>:20      <span class="token operator">|</span>   <span class="token operator">|</span>       <span class="token punctuation">\</span>_ nginx: worker process
+<span class="token number">999</span>        <span class="token number">3105</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">24368</span>  <span class="token number">6788</span> ?        S    Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>       <span class="token punctuation">\</span>_ nginx: worker process
+<span class="token number">999</span>        <span class="token number">3106</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">24368</span>  <span class="token number">6788</span> ?        S    Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>       <span class="token punctuation">\</span>_ nginx: worker process
+<span class="token number">999</span>        <span class="token number">3107</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">20332</span>  <span class="token number">2556</span> ?        S    Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>       <span class="token punctuation">\</span>_ nginx: cache manager process
+root       <span class="token number">3041</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2376</span>   <span class="token number">708</span> ?        Ss   Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token punctuation">\</span>_ runsv gitlab-exporter
+root       <span class="token number">3068</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2520</span>   <span class="token number">704</span> ?        S    Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ svlogd -tt /var/log/gitlab/gitlab-exporter
+<span class="token number">998</span>        <span class="token number">3069</span>  <span class="token number">0.0</span>  <span class="token number">0.5</span> <span class="token number">125068</span> <span class="token number">45208</span> ?        Ss   Jun05   <span class="token number">0</span>:02      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ /opt/gitlab/embedded/bin/ruby /opt/gitlab/embedded/bin/gitlab-exporter web -c /var/opt/gitlab/gitlab-exporter/gitlab-e
+root       <span class="token number">3043</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2376</span>   <span class="token number">708</span> ?        Ss   Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token punctuation">\</span>_ runsv redis-exporter
+root       <span class="token number">3050</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2520</span>   <span class="token number">704</span> ?        S    Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ svlogd -tt /var/log/gitlab/redis-exporter
+<span class="token number">997</span>        <span class="token number">3052</span>  <span class="token number">0.0</span>  <span class="token number">0.1</span> <span class="token number">1093012</span> <span class="token number">9476</span> ?        Ssl  Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ /opt/gitlab/embedded/bin/redis_exporter --web.listen-address<span class="token operator">=</span>localhost:9121 --redis.addr<span class="token operator">=</span>unix:///var/opt/gitlab/redis/
+root       <span class="token number">3044</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2376</span>  <span class="token number">1352</span> ?        Ss   Jun05   <span class="token number">2</span>:28      <span class="token operator">|</span>   <span class="token punctuation">\</span>_ runsv prometheus
+root       <span class="token number">3067</span>  <span class="token number">0.2</span>  <span class="token number">0.0</span>   <span class="token number">2520</span>   <span class="token number">640</span> ?        S    Jun05   <span class="token number">6</span>:34      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ svlogd -tt /var/log/gitlab/prometheus
+root       <span class="token number">3045</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2376</span>   <span class="token number">708</span> ?        Ss   Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token punctuation">\</span>_ runsv alertmanager
+root       <span class="token number">3081</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2520</span>   <span class="token number">696</span> ?        S    Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ svlogd -tt /var/log/gitlab/alertmanager
+<span class="token number">992</span>        <span class="token number">3084</span>  <span class="token number">0.1</span>  <span class="token number">0.3</span> <span class="token number">1409236</span> <span class="token number">27868</span> ?       Ssl  Jun05   <span class="token number">4</span>:26      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ /opt/gitlab/embedded/bin/alertmanager --web.listen-address<span class="token operator">=</span>localhost:9093 --storage.path<span class="token operator">=</span>/var/opt/gitlab/alertmanager/
+root       <span class="token number">3046</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2376</span>   <span class="token number">640</span> ?        Ss   Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token punctuation">\</span>_ runsv postgres-exporter
+root       <span class="token number">3074</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2520</span>   <span class="token number">640</span> ?        S    Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ svlogd -tt /var/log/gitlab/postgres-exporter
+<span class="token number">996</span>        <span class="token number">3075</span>  <span class="token number">0.0</span>  <span class="token number">0.1</span> <span class="token number">1092976</span> <span class="token number">9648</span> ?        Ssl  Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token operator">|</span>   <span class="token punctuation">\</span>_ /opt/gitlab/embedded/bin/postgres_exporter --web.listen-address<span class="token operator">=</span>localhost:9187 --extend.query-path<span class="token operator">=</span>/var/opt/gitlab/pos
+root       <span class="token number">3047</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2376</span>   <span class="token number">712</span> ?        Ss   Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>   <span class="token punctuation">\</span>_ runsv grafana
+root       <span class="token number">3058</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2520</span>   <span class="token number">708</span> ?        S    Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>       <span class="token punctuation">\</span>_ svlogd -tt /var/log/gitlab/grafana
+<span class="token number">992</span>        <span class="token number">3059</span>  <span class="token number">0.0</span>  <span class="token number">0.7</span> <span class="token number">1600600</span> <span class="token number">58096</span> ?       Ssl  Jun05   <span class="token number">1</span>:19      <span class="token operator">|</span>       <span class="token punctuation">\</span>_ /opt/gitlab/embedded/bin/grafana-server -config /var/opt/gitlab/grafana/grafana.ini
+root       <span class="token number">3177</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">5732</span>  <span class="token number">3332</span> ?        S    Jun05   <span class="token number">0</span>:00      <span class="token punctuation">\</span>_ /bin/bash /opt/gitlab/bin/gitlab-ctl <span class="token function">tail</span>
+root       <span class="token number">3178</span>  <span class="token number">0.0</span>  <span class="token number">0.5</span>  <span class="token number">95576</span> <span class="token number">41628</span> ?        S    Jun05   <span class="token number">0</span>:03      <span class="token operator">|</span>   <span class="token punctuation">\</span>_ /opt/gitlab/embedded/bin/ruby /opt/gitlab/embedded/bin/omnibus-ctl gitlab /opt/gitlab/embedded/service/omnibus-ctl* <span class="token function">tail</span>
+root       <span class="token number">3181</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">2612</span>   <span class="token number">604</span> ?        S    Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>       <span class="token punctuation">\</span>_ <span class="token function">sh</span> -c <span class="token function">find</span> -L /var/log/gitlab -type f -not -path <span class="token string">&apos;*/sasl/*&apos;</span> <span class="token operator">|</span> <span class="token function">grep</span> -E -v <span class="token string">&apos;(config|lock|@|gzip|tgz|gz)&apos;</span> <span class="token operator">|</span> <span class="token function">xargs</span> <span class="token function">tail</span> --
+root       <span class="token number">3184</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>   <span class="token number">4564</span>   <span class="token number">584</span> ?        S    Jun05   <span class="token number">0</span>:00      <span class="token operator">|</span>           <span class="token punctuation">\</span>_ <span class="token function">xargs</span> <span class="token function">tail</span> --follow<span class="token operator">=</span>name --retry
+root       <span class="token number">3185</span>  <span class="token number">0.2</span>  <span class="token number">0.0</span>   <span class="token number">4300</span>   <span class="token number">584</span> ?        S    Jun05   <span class="token number">6</span>:13      <span class="token operator">|</span>               <span class="token punctuation">\</span>_ <span class="token function">tail</span> --follow<span class="token operator">=</span>name --retry /var/log/gitlab/nginx/gitlab_error.log /var/log/gitlab/nginx/access.log /var/log/gi
+<span class="token number">998</span>        <span class="token number">5215</span>  <span class="token number">0.1</span> <span class="token number">10.2</span> <span class="token number">1134168</span> <span class="token number">778140</span> ?      Sl   Jun05   <span class="token number">4</span>:26      <span class="token punctuation">\</span>_ puma: cluster worker <span class="token number">0</span>: <span class="token number">1412</span> <span class="token punctuation">[</span>gitlab-puma-worker<span class="token punctuation">]</span>
+<span class="token number">998</span>        <span class="token number">5217</span>  <span class="token number">0.1</span> <span class="token number">10.2</span> <span class="token number">1152600</span> <span class="token number">778932</span> ?      Sl   Jun05   <span class="token number">4</span>:43      <span class="token punctuation">\</span>_ puma: cluster worker <span class="token number">1</span>: <span class="token number">1412</span> <span class="token punctuation">[</span>gitlab-puma-worker<span class="token punctuation">]</span>
+<span class="token number">998</span>        <span class="token number">5219</span>  <span class="token number">0.1</span> <span class="token number">10.2</span> <span class="token number">1142360</span> <span class="token number">780604</span> ?      Sl   Jun05   <span class="token number">4</span>:26      <span class="token punctuation">\</span>_ puma: cluster worker <span class="token number">2</span>: <span class="token number">1412</span> <span class="token punctuation">[</span>gitlab-puma-worker<span class="token punctuation">]</span>
+<span class="token number">998</span>        <span class="token number">5221</span>  <span class="token number">0.1</span> <span class="token number">10.2</span> <span class="token number">1152600</span> <span class="token number">779260</span> ?      Sl   Jun05   <span class="token number">4</span>:41      <span class="token punctuation">\</span>_ puma: cluster worker <span class="token number">3</span>: <span class="token number">1412</span> <span class="token punctuation">[</span>gitlab-puma-worker<span class="token punctuation">]</span>
+root       <span class="token number">2311</span>  <span class="token number">0.0</span>  <span class="token number">0.1</span> <span class="token number">713108</span>  <span class="token number">9108</span> ?        Sl   Jun05   <span class="token number">0</span>:34 /usr/bin/containerd-shim-runc-v2 -namespace moby -id c9a392e472fdd83fa02c8c3ffd9b9d11078872d7e7a198dcb1e5a0fa6a2d9e3e -address /run/co
+root       <span class="token number">2365</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>    <span class="token number">212</span>     <span class="token number">4</span> ?        Ss   Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ /usr/bin/dumb-init /entrypoint run --user<span class="token operator">=</span>gitlab-runner --working-directory<span class="token operator">=</span>/home/gitlab-runner
+root       <span class="token number">2400</span>  <span class="token number">0.1</span>  <span class="token number">0.4</span> <span class="token number">152420</span> <span class="token number">33012</span> ?        Ssl  Jun05   <span class="token number">4</span>:28      <span class="token punctuation">\</span>_ gitlab-runner run --user<span class="token operator">=</span>gitlab-runner --working-directory<span class="token operator">=</span>/home/gitlab-runner
+root       <span class="token number">2456</span>  <span class="token number">0.0</span>  <span class="token number">0.1</span> <span class="token number">711700</span>  <span class="token number">9408</span> ?        Sl   Jun05   <span class="token number">0</span>:28 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 8c51a6f7265cafd6ec1db0f86086aa086f5493b1f913bbe0b634814e09cd0772 -address /run/co
+<span class="token number">999</span>        <span class="token number">2483</span>  <span class="token number">0.6</span>  <span class="token number">1.4</span> <span class="token number">1546508</span> <span class="token number">111420</span> ?      Ssl  Jun05  <span class="token number">17</span>:11  <span class="token punctuation">\</span>_ mongod --bind_ip_all
+root       <span class="token number">3373</span>  <span class="token number">0.0</span>  <span class="token number">0.1</span>  <span class="token number">76760</span>  <span class="token number">7736</span> ?        Ss   Jun05   <span class="token number">0</span>:10 /lib/systemd/systemd --user
+root       <span class="token number">3380</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span> <span class="token number">191368</span>  <span class="token number">2552</span> ?        S    Jun05   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ <span class="token punctuation">(</span>sd-pam<span class="token punctuation">)</span>
+root     <span class="token number">116287</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>  <span class="token number">92032</span>  <span class="token number">3448</span> ?        SLs  05:59   <span class="token number">0</span>:00  <span class="token punctuation">\</span>_ /usr/bin/gpg-agent --supervised
+--------------------
+vmstat:
+procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b   swpd   <span class="token function">free</span>   buff  cache   si   so    bi    bo   <span class="token keyword">in</span>   cs us sy <span class="token function">id</span> wa st
+ <span class="token number">7</span>  <span class="token number">0</span>      <span class="token number">0</span> <span class="token number">911992</span> <span class="token number">386560</span> <span class="token number">2464324</span>    <span class="token number">0</span>    <span class="token number">0</span>     <span class="token number">4</span>    <span class="token number">15</span>   <span class="token number">19</span>   <span class="token number">36</span> <span class="token number">20</span>  <span class="token number">9</span> <span class="token number">71</span>  <span class="token number">0</span>  <span class="token number">0</span>
+ <span class="token number">3</span>  <span class="token number">0</span>      <span class="token number">0</span> <span class="token number">908272</span> <span class="token number">386560</span> <span class="token number">2464336</span>    <span class="token number">0</span>    <span class="token number">0</span>     <span class="token number">0</span>     <span class="token number">0</span> <span class="token number">1876</span> <span class="token number">3107</span> <span class="token number">16</span> <span class="token number">14</span> <span class="token number">71</span>  <span class="token number">0</span>  <span class="token number">0</span>
+ <span class="token number">2</span>  <span class="token number">0</span>      <span class="token number">0</span> <span class="token number">901708</span> <span class="token number">386560</span> <span class="token number">2464356</span>    <span class="token number">0</span>    <span class="token number">0</span>     <span class="token number">0</span>     <span class="token number">0</span> <span class="token number">1479</span> <span class="token number">2539</span> <span class="token number">14</span> <span class="token number">15</span> <span class="token number">71</span>  <span class="token number">0</span>  <span class="token number">0</span>
+ <span class="token number">2</span>  <span class="token number">0</span>      <span class="token number">0</span> <span class="token number">888604</span> <span class="token number">386560</span> <span class="token number">2464356</span>    <span class="token number">0</span>    <span class="token number">0</span>     <span class="token number">0</span>    <span class="token number">80</span> <span class="token number">1892</span> <span class="token number">3200</span> <span class="token number">15</span> <span class="token number">15</span> <span class="token number">70</span>  <span class="token number">0</span>  <span class="token number">0</span>
+ <span class="token number">2</span>  <span class="token number">0</span>      <span class="token number">0</span> <span class="token number">885012</span> <span class="token number">386560</span> <span class="token number">2464376</span>    <span class="token number">0</span>    <span class="token number">0</span>     <span class="token number">0</span>   <span class="token number">150</span> <span class="token number">2005</span> <span class="token number">4046</span> <span class="token number">13</span> <span class="token number">17</span> <span class="token number">70</span>  <span class="token number">0</span>  <span class="token number">0</span>
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; ghostwritten &#x6D59;ICP&#x5907;2020032454&#x53F7; 2022 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-06-22 16:49:26
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="shell_fileOrdir_state.html" class="navigation navigation-prev " aria-label="Previous page: shell 判断文件 目录状态">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="shell_disk.html" class="navigation navigation-next " aria-label="Next page: shell 磁盘空间">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"shell 报告服务器信息","level":"1.4.1.2","depth":3,"next":{"title":"shell 磁盘空间","level":"1.4.1.3","depth":3,"path":"Case/Monitor/shell_disk.md","ref":"Case/Monitor/shell_disk.md","articles":[]},"previous":{"title":"shell 判断文件 目录状态","level":"1.4.1.1","depth":3,"path":"Case/Monitor/shell_fileOrdir_state.md","ref":"Case/Monitor/shell_fileOrdir_state.md","articles":[]},"dir":"ltr"},"config":{"plugins":["3-ba","accordion","advanced-emoji","anchor-navigation-ex","baidu-tongji","code","change_girls","custom-favicon","donate","chapter-fold","edit-link","flexible-alerts","github-buttons","github","insert-logo","musicxml","prism","prism-themes","pageview-count","-highlight","-search","-lunr","rss","search-plus","splitter","-sharing","sharing-plus","sidebar-style","theme-default","tags","tbfed-pagefooter"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"sidebar-style":{"author":"zongxun","title":"《Shell Docs》"},"tbfed-pagefooter":{"copyright":"Copyright &copy ghostwritten 浙ICP备2020032454号 2022","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-holi-theme.css"],"lang":{"shell":"bash"}},"github":{"url":"https://github.com/Ghostwritten"},"baidu-tongji":{"url":"https://hm.baidu.com/hm.js","token":"55e7dfe47f4dc1c018d4042fdfa62565"},"splitter":{},"change_girls":{"time":10,"urls":["https://pic4.zhimg.com/80/v2-e4d7fa3a96aa4a3740d91a313b2c5f5b_1440w.jpg","https://pic4.zhimg.com/80/v2-598a1ab3ffa3db75f7430ff012eef7a3_1440w.jpg","https://pic2.zhimg.com/80/v2-cb16b2e936a7ee03466afcb02d9b56d1_1440w.jpg","https://pic4.zhimg.com/80/v2-b99b00a18858c8a1d73068f534c5d85b_1440w.jpg","https://pic1.zhimg.com/80/v2-4f155317a55a878b05c000ff80add4f8_1440w.jpg","https://pic1.zhimg.com/80/v2-6cf80eabe444ffc4d4da73b1f1ae56b0_1440w.jpg"]},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"donate":{"alipay":"https://github.com/Ghostwritten/shell-docs/blob/gh-pages/assets/imgs/aplipay.png?raw=true","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://github.com/Ghostwritten/shell-docs/blob/gh-pages/assets/imgs/wechat.png?raw=true","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"Gitbook Docs","description":"This is the best book ever.","author":"Zong Xun","feed_url":"http://smoothies.com.cn/rss","site_url":"https://smoothies.com.cn/shell-docs/","managingEditor":"writer@smoothies.com.cn (Zong Xun)","webMaster":"webmaster@smoothies.com.cn (Zong Xun)"},"musicxml":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":"assets/imgs/1_girl.ico","pageview-count":{},"prism-themes":{},"github-buttons":{"buttons":[{"user":"Ghostwritten","repo":"shell-docs","type":"star","count":true,"size":"small"}]},"custom-favicon":{},"tags":{"placement":"top"},"3-ba":{"configuration":"auto","token":"9ffc0dce8d7079aceab6b0bc18eb626b"},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Danger"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper"],"douban":false,"facebook":true,"weibo":false,"twitter":true,"pocket":false,"google":false,"qzone":false},"edit-link":{"label":"Edit","base":"https://github.com/Ghostwritten/shell-docs/edit/master/"},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"insert-logo":{"style":"background: none; max-height: 100px; min-height: 100px","url":"https://img-blog.csdnimg.cn/e10caf2bc4a94aaea5b4fde70392fd0c.png"},"search-plus":{}},"theme":"default","author":"宗勋 - zongxun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Shell Docs","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Docker":"https://smoothies.com.cn/docker-docs/Overview.html","Blog":"https://smoothies.com.cn","Kubernetes":"https://smoothies.com.cn/kubernetes-docs/Overview.html","Go":"https://smoothies.com.cn/go-docs/Overview.html","Prometheus":"https://smoothies.com.cn/prometheus-docs/Overview.html","Command":"https://smoothies.com.cn/linux-command-docs/Overview.html","Javascript":"https://smoothies.com.cn/javascript-docs/Overview.html","Shell":"https://smoothies.com.cn/shell-docs/Overview.html","Linux":"https://smoothies.com.cn/linux-docs/Overview.html","Gitbook":"https://smoothies.com.cn/gitbook-docs/Overview.html","Python":"https://smoothies.com.cn/python-docs/Overview.html","Exam":"https://ghostwritten.gitbook.io/kubernetes-exam-in-action/"}},"gitbook":"*","description":"这是一本关于 [Shell](https://zh.m.wikipedia.org/zh/Unix_shell) 的书籍"},"file":{"path":"Case/Monitor/shell_os_message2.md","mtime":"2022-06-22T16:49:26.861Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-16T08:58:25.363Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-baidu-tongji/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-change_girls/girls.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-musicxml/osmd.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-musicxml/musicxml.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-musicxml/promise.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sidebar-style/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

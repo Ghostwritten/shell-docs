@@ -1,0 +1,1284 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Base · Shell Docs</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="宗勋 - zongxun">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-change_girls/girls.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-holi-theme.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-pageview-count/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sidebar-style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tags/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="shell_set.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    <link href="http://smoothies.com.cn/rss" title="Gitbook Docs" rel="alternate" type="application/rss+xml" />
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"Ghostwritten","repo":"shell-docs","type":"star","count":true,"size":"small"}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/docker-docs/Overview.html" target="_blank" class="custom-link">Docker</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn" target="_blank" class="custom-link">Blog</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/kubernetes-docs/Overview.html" target="_blank" class="custom-link">Kubernetes</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/go-docs/Overview.html" target="_blank" class="custom-link">Go</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/prometheus-docs/Overview.html" target="_blank" class="custom-link">Prometheus</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/linux-command-docs/Overview.html" target="_blank" class="custom-link">Command</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/javascript-docs/Overview.html" target="_blank" class="custom-link">Javascript</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/shell-docs/Overview.html" target="_blank" class="custom-link">Shell</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/linux-docs/Overview.html" target="_blank" class="custom-link">Linux</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/gitbook-docs/Overview.html" target="_blank" class="custom-link">Gitbook</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://smoothies.com.cn/python-docs/Overview.html" target="_blank" class="custom-link">Python</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://ghostwritten.gitbook.io/kubernetes-exam-in-action/" target="_blank" class="custom-link">Exam</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../Overview.html">
+            
+                <a href="../Overview.html">
+            
+                    
+                    目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    序言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Base
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="shell_set.html">
+            
+                <a href="shell_set.html">
+            
+                    
+                    shell set 命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="shell_wildcard_expansion.html">
+            
+                <a href="shell_wildcard_expansion.html">
+            
+                    
+                    shell 通配符扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="shell_dollar_string.html">
+            
+                <a href="shell_dollar_string.html">
+            
+                    
+                    shell dollar 字符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="shell_default_parameter.html">
+            
+                <a href="shell_default_parameter.html">
+            
+                    
+                    shell 默认参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="shell_command_wait.html">
+            
+                <a href="shell_command_wait.html">
+            
+                    
+                    shell wait 等待命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="shell_IFS.html">
+            
+                <a href="shell_IFS.html">
+            
+                    
+                    shell ifs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="shell_quotes_and_escaping.html">
+            
+                <a href="shell_quotes_and_escaping.html">
+            
+                    
+                    shell 引号和转义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="shell_command_return.html">
+            
+                <a href="shell_command_return.html">
+            
+                    
+                    shell 命令返回值判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="shell_control_condition.html">
+            
+                <a href="shell_control_condition.html">
+            
+                    
+                    shell 判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="shell_while_getopts.html">
+            
+                <a href="shell_while_getopts.html">
+            
+                    
+                    shell while getopts
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="shell_command_line.html">
+            
+                <a href="shell_command_line.html">
+            
+                    
+                    shell 命令行操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="shell_loop.html">
+            
+                <a href="shell_loop.html">
+            
+                    
+                    shell 循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="shell_tmp_file_or_dir.html">
+            
+                <a href="shell_tmp_file_or_dir.html">
+            
+                    
+                    shell 创建临时文件 目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="shell_command_sleep.html">
+            
+                <a href="shell_command_sleep.html">
+            
+                    
+                    shell sleep 睡眠
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="shell_multithread_script.html">
+            
+                <a href="shell_multithread_script.html">
+            
+                    
+                    shell 多线程脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="shell_array.html">
+            
+                <a href="shell_array.html">
+            
+                    
+                    shell 数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="shell_Cross-script_variable_declaration.html">
+            
+                <a href="shell_Cross-script_variable_declaration.html">
+            
+                    
+                    shell 跨脚本变量传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="shell_help.html">
+            
+                <a href="shell_help.html">
+            
+                    
+                    shell 查看帮助
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="shell_operator.html">
+            
+                <a href="shell_operator.html">
+            
+                    
+                    shell 运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="shell_variable.html">
+            
+                <a href="shell_variable.html">
+            
+                    
+                    shell 变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21" data-path="shell_function.html">
+            
+                <a href="shell_function.html">
+            
+                    
+                    shell 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22" data-path="shell_log_and_print.html">
+            
+                <a href="shell_log_and_print.html">
+            
+                    
+                    shell 日志与打印输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Case/">
+            
+                <a href="../Case/">
+            
+                    
+                    Case
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Case/Monitor/">
+            
+                <a href="../Case/Monitor/">
+            
+                    
+                    Monitor
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../Case/Monitor/shell_fileOrdir_state.html">
+            
+                <a href="../Case/Monitor/shell_fileOrdir_state.html">
+            
+                    
+                    shell 判断文件 目录状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../Case/Monitor/shell_os_message2.html">
+            
+                <a href="../Case/Monitor/shell_os_message2.html">
+            
+                    
+                    shell 报告服务器信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../Case/Monitor/shell_disk.html">
+            
+                <a href="../Case/Monitor/shell_disk.html">
+            
+                    
+                    shell 磁盘空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../Case/Monitor/shell_weather.html">
+            
+                <a href="../Case/Monitor/shell_weather.html">
+            
+                    
+                    shell 天气预报
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" data-path="../Case/Monitor/shell_CPU.html">
+            
+                <a href="../Case/Monitor/shell_CPU.html">
+            
+                    
+                    shell cpu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.6" data-path="../Case/Monitor/shell_hardware.html">
+            
+                <a href="../Case/Monitor/shell_hardware.html">
+            
+                    
+                    shell 硬件信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.7" data-path="../Case/Monitor/shell_get_ip_address.html">
+            
+                <a href="../Case/Monitor/shell_get_ip_address.html">
+            
+                    
+                    shell 获取 ip 位置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.8" data-path="../Case/Monitor/shell_os_message.html">
+            
+                <a href="../Case/Monitor/shell_os_message.html">
+            
+                    
+                    shell 显示系统信息菜单
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Case/shell_hello_world.html">
+            
+                <a href="../Case/shell_hello_world.html">
+            
+                    
+                    hello world
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Case/Math/">
+            
+                <a href="../Case/Math/">
+            
+                    
+                    Math
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../Case/Math/shell_subtraction.html">
+            
+                <a href="../Case/Math/shell_subtraction.html">
+            
+                    
+                    shell 减法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.2" data-path="../Case/Math/shell_Multiplication.html">
+            
+                <a href="../Case/Math/shell_Multiplication.html">
+            
+                    
+                    shell 乘法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.3" data-path="../Case/Math/shell_rock-paper-scissors.html">
+            
+                <a href="../Case/Math/shell_rock-paper-scissors.html">
+            
+                    
+                    shell 石头剪刀布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.4" data-path="../Case/Math/shell_compare.html">
+            
+                <a href="../Case/Math/shell_compare.html">
+            
+                    
+                    shell  比较大小
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3.5" data-path="../Case/Math/shell_addition.html">
+            
+                <a href="../Case/Math/shell_addition.html">
+            
+                    
+                    shell 加法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Case/Game/">
+            
+                <a href="../Case/Game/">
+            
+                    
+                    Game
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../Case/Game/shell_lottery.html">
+            
+                <a href="../Case/Game/shell_lottery.html">
+            
+                    
+                    shell 模拟抽奖
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Case/Art/">
+            
+                <a href="../Case/Art/">
+            
+                    
+                    Art
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.5.1" data-path="../Case/Art/shell_spinner_loading.html">
+            
+                <a href="../Case/Art/shell_spinner_loading.html">
+            
+                    
+                    shell 微调加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.2" data-path="../Case/Art/shell_diamond.html">
+            
+                <a href="../Case/Art/shell_diamond.html">
+            
+                    
+                    shell 菱形图案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.3" data-path="../Case/Art/shell_upper_lower.html">
+            
+                <a href="../Case/Art/shell_upper_lower.html">
+            
+                    
+                    shell  大小写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5.4" data-path="../Case/Art/shell_color.html">
+            
+                <a href="../Case/Art/shell_color.html">
+            
+                    
+                    shell 颜色输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../Case/shell_command_return.html">
+            
+                <a href="../Case/shell_command_return.html">
+            
+                    
+                    shell 命令输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../Case/shell_read.html">
+            
+                <a href="../Case/shell_read.html">
+            
+                    
+                    shell 简单交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../Case/Task/">
+            
+                <a href="../Case/Task/">
+            
+                    
+                    Task
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.8.1" data-path="../Case/Task/shell_mount.html">
+            
+                <a href="../Case/Task/shell_mount.html">
+            
+                    
+                    shell 挂载目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.2" data-path="../Case/Task/shell_change_files.html">
+            
+                <a href="../Case/Task/shell_change_files.html">
+            
+                    
+                    shell 批量修改文件名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.3" data-path="../Case/Task/shell_moveup_dir.html">
+            
+                <a href="../Case/Task/shell_moveup_dir.html">
+            
+                    
+                    shell 上移目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8.4" data-path="../Case/Task/shell_clean_log.html">
+            
+                <a href="../Case/Task/shell_clean_log.html">
+            
+                    
+                    shell 清理日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Base</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#shell-&#x7B80;&#x4ECB;"><b></b>shell &#x7B80;&#x4ECB;</a></li><ul><li><span class="title-icon "></span><a href="#1-shell-&#x7684;&#x542B;&#x4E49;"><b></b>1. Shell &#x7684;&#x542B;&#x4E49;</a></li><li><span class="title-icon "></span><a href="#2-shell-&#x7684;&#x79CD;&#x7C7B;"><b></b>2. Shell &#x7684;&#x79CD;&#x7C7B;</a></li><li><span class="title-icon "></span><a href="#3-&#x547D;&#x4EE4;&#x884C;&#x73AF;&#x5883;"><b></b>3. &#x547D;&#x4EE4;&#x884C;&#x73AF;&#x5883;</a></li><ul><li><span class="title-icon "></span><a href="#31-&#x7EC8;&#x7AEF;&#x6A21;&#x62DF;&#x5668;"><b></b>3.1 &#x7EC8;&#x7AEF;&#x6A21;&#x62DF;&#x5668;</a></li><li><span class="title-icon "></span><a href="#32-&#x547D;&#x4EE4;&#x884C;&#x63D0;&#x793A;&#x7B26;"><b></b>3.2 &#x547D;&#x4EE4;&#x884C;&#x63D0;&#x793A;&#x7B26;</a></li><li><span class="title-icon "></span><a href="#33-&#x8FDB;&#x5165;&#x548C;&#x9000;&#x51FA;&#x65B9;&#x6CD5;"><b></b>3.3 &#x8FDB;&#x5165;&#x548C;&#x9000;&#x51FA;&#x65B9;&#x6CD5;</a></li></ul><li><span class="title-icon "></span><a href="#4-shell-&#x548C;-bash-&#x7684;&#x5386;&#x53F2;"><b></b>4. Shell &#x548C; Bash &#x7684;&#x5386;&#x53F2;</a></li></ul></ul></div><a href="#shell-&#x7B80;&#x4ECB;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="shell-&#x7B80;&#x4ECB;"><a name="shell-&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#shell-&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>shell &#x7B80;&#x4ECB;</h1>
+<p><img src="https://img-blog.csdnimg.cn/7d44286d8415442c85d6a38623b7cbe6.gif#pic_center" alt="&#x5728;&#x8FD9;&#x91CC;&#x63D2;&#x5165;&#x56FE;&#x7247;&#x63CF;&#x8FF0;"></p>
+<h2 id="1-shell-&#x7684;&#x542B;&#x4E49;"><a name="1-shell-&#x7684;&#x542B;&#x4E49;" class="anchor-navigation-ex-anchor" href="#1-shell-&#x7684;&#x542B;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a>1. Shell &#x7684;&#x542B;&#x4E49;</h2>
+<p>&#x5B66;&#x4E60; Bash&#xFF0C;&#x9996;&#x5148;&#x9700;&#x8981;&#x7406;&#x89E3; Shell &#x662F;&#x4EC0;&#x4E48;&#x3002;Shell &#x8FD9;&#x4E2A;&#x5355;&#x8BCD;&#x7684;&#x539F;&#x610F;&#x662F;&#x201C;&#x5916;&#x58F3;&#x201D;&#xFF0C;&#x8DDF; kernel&#xFF08;&#x5185;&#x6838;&#xFF09;&#x76F8;&#x5BF9;&#x5E94;&#xFF0C;&#x6BD4;&#x55BB;&#x5185;&#x6838;&#x5916;&#x9762;&#x7684;&#x4E00;&#x5C42;&#xFF0C;&#x5373;&#x7528;&#x6237;&#x8DDF;&#x5185;&#x6838;&#x4EA4;&#x4E92;&#x7684;&#x5BF9;&#x8BDD;&#x754C;&#x9762;&#x3002;</p>
+<p>&#x5177;&#x4F53;&#x6765;&#x8BF4;&#xFF0C;Shell &#x8FD9;&#x4E2A;&#x8BCD;&#x6709;&#x591A;&#x79CD;&#x542B;&#x4E49;&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;Shell &#x662F;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#xFF0C;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x4E0E;&#x7528;&#x6237;&#x5BF9;&#x8BDD;&#x7684;&#x73AF;&#x5883;&#x3002;&#x8FD9;&#x4E2A;&#x73AF;&#x5883;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x63D0;&#x793A;&#x7B26;&#xFF0C;&#x8BA9;&#x7528;&#x6237;&#x4ECE;&#x952E;&#x76D8;&#x8F93;&#x5165;&#x547D;&#x4EE4;&#xFF0C;&#x6240;&#x4EE5;&#x53C8;&#x79F0;&#x4E3A;&#x547D;&#x4EE4;&#x884C;&#x73AF;&#x5883;&#xFF08;command line interface&#xFF0C;&#x7B80;&#x5199;&#x4E3A; CLI&#xFF09;&#x3002;Shell &#x63A5;&#x6536;&#x5230;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x5C06;&#x547D;&#x4EE4;&#x9001;&#x5165;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x6267;&#x884C;&#xFF0C;&#x5E76;&#x5C06;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x7ED9;&#x7528;&#x6237;&#x3002;&#x672C;&#x4E66;&#x4E2D;&#xFF0C;&#x9664;&#x975E;&#x7279;&#x522B;&#x6307;&#x660E;&#xFF0C;Shell &#x6307;&#x7684;&#x5C31;&#x662F;&#x547D;&#x4EE4;&#x884C;&#x73AF;&#x5883;&#x3002;</p>
+<p>&#x5176;&#x6B21;&#xFF0C;Shell &#x662F;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x89E3;&#x91CA;&#x5668;&#xFF0C;&#x89E3;&#x91CA;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x547D;&#x4EE4;&#x3002;&#x5B83;&#x652F;&#x6301;&#x53D8;&#x91CF;&#x3001;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x3001;&#x5FAA;&#x73AF;&#x64CD;&#x4F5C;&#x7B49;&#x8BED;&#x6CD5;&#xFF0C;&#x6240;&#x4EE5;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x7528; Shell &#x547D;&#x4EE4;&#x5199;&#x51FA;&#x5404;&#x79CD;&#x5C0F;&#x7A0B;&#x5E8F;&#xFF0C;&#x53C8;&#x79F0;&#x4E3A;&#x811A;&#x672C;&#xFF08;script&#xFF09;&#x3002;&#x8FD9;&#x4E9B;&#x811A;&#x672C;&#x90FD;&#x901A;&#x8FC7; Shell &#x7684;&#x89E3;&#x91CA;&#x6267;&#x884C;&#xFF0C;&#x800C;&#x4E0D;&#x901A;&#x8FC7;&#x7F16;&#x8BD1;&#x3002;</p>
+<p>&#x6700;&#x540E;&#xFF0C;Shell &#x662F;&#x4E00;&#x4E2A;&#x5DE5;&#x5177;&#x7BB1;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x5404;&#x79CD;&#x5C0F;&#x5DE5;&#x5177;&#xFF0C;&#x4F9B;&#x7528;&#x6237;&#x65B9;&#x4FBF;&#x5730;&#x4F7F;&#x7528;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<h2 id="2-shell-&#x7684;&#x79CD;&#x7C7B;"><a name="2-shell-&#x7684;&#x79CD;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#2-shell-&#x7684;&#x79CD;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>2. Shell &#x7684;&#x79CD;&#x7C7B;</h2>
+<p>Shell &#x6709;&#x5F88;&#x591A;&#x79CD;&#xFF0C;&#x53EA;&#x8981;&#x80FD;&#x7ED9;&#x7528;&#x6237;&#x63D0;&#x4F9B;&#x547D;&#x4EE4;&#x884C;&#x73AF;&#x5883;&#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x770B;&#x4F5C;&#x662F; Shell&#x3002;</p>
+<p>&#x5386;&#x53F2;&#x4E0A;&#xFF0C;&#x4E3B;&#x8981;&#x7684; Shell &#x6709;&#x4E0B;&#x9762;&#x8FD9;&#x4E9B;&#x3002;</p>
+<ul>
+<li>Bourne Shell&#xFF08;sh&#xFF09;</li>
+<li>Bourne Again shell&#xFF08;bash&#xFF09;</li>
+<li>C Shell&#xFF08;csh&#xFF09;</li>
+<li>TENEX C Shell&#xFF08;tcsh&#xFF09;</li>
+<li>Korn shell&#xFF08;ksh&#xFF09;</li>
+<li>Z Shell&#xFF08;zsh&#xFF09;</li>
+<li>Friendly Interactive Shell&#xFF08;fish&#xFF09;</li>
+</ul>
+<p>Bash &#x662F;&#x76EE;&#x524D;&#x6700;&#x5E38;&#x7528;&#x7684; Shell&#xFF0C;&#x9664;&#x975E;&#x7279;&#x522B;&#x6307;&#x660E;&#xFF0C;&#x4E0B;&#x6587;&#x7684; Shell &#x548C; Bash &#x5F53;&#x4F5C;&#x540C;&#x4E49;&#x8BCD;&#x4F7F;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x4E92;&#x6362;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x8BBE;&#x5907;&#x7684;&#x9ED8;&#x8BA4; Shell&#x3002;</p>
+<pre class="language-"><code class="lang-bash">$ <span class="token builtin class-name">echo</span> <span class="token environment constant">$SHELL</span>
+/bin/bash
+</code></pre>
+<p>&#x5F53;&#x524D;&#x6B63;&#x5728;&#x4F7F;&#x7528;&#x7684; Shell &#x4E0D;&#x4E00;&#x5B9A;&#x662F;&#x9ED8;&#x8BA4; Shell&#xFF0C;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;ps&#x547D;&#x4EE4;&#x7ED3;&#x679C;&#x7684;&#x5012;&#x6570;&#x7B2C;&#x4E8C;&#x884C;&#x662F;&#x5F53;&#x524D; Shell&#x3002;</p>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">ps</span>
+  PID TTY          TIME CMD
+ <span class="token number">4467</span> pts/0    00:00:00 <span class="token function">bash</span>
+ <span class="token number">5379</span> pts/0    00:00:00 <span class="token function">ps</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;ps&#x547D;&#x4EE4;&#x7ED3;&#x679C;&#x7684;&#x5012;&#x6570;&#x7B2C;&#x4E8C;&#x884C;&#x663E;&#x793A;&#xFF0C;&#x8FD0;&#x884C;&#x7684;&#x547D;&#x4EE4;&#xFF08;cmd&#xFF09;&#x662F;bash&#xFF0C;&#x8868;&#x660E;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x4F7F;&#x7528;&#x7684; Shell &#x662F; Bash&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x5F53;&#x524D;&#x7684; Linux &#x7CFB;&#x7EDF;&#x5B89;&#x88C5;&#x7684;&#x6240;&#x6709; Shell&#x3002;</p>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">cat</span> /etc/shells
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4E09;&#x4E2A;&#x547D;&#x4EE4;&#x4E2D;&#xFF0C;$&#x662F;&#x547D;&#x4EE4;&#x884C;&#x73AF;&#x5883;&#x7684;&#x63D0;&#x793A;&#x7B26;&#xFF0C;&#x7528;&#x6237;&#x53EA;&#x9700;&#x8981;&#x8F93;&#x5165;&#x63D0;&#x793A;&#x7B26;&#x540E;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<p>Linux &#x5141;&#x8BB8;&#x6BCF;&#x4E2A;&#x7528;&#x6237;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684; Shell&#xFF0C;&#x7528;&#x6237;&#x7684;&#x9ED8;&#x8BA4; Shell &#x4E00;&#x822C;&#x90FD;&#x662F; Bash&#xFF0C;&#x6216;&#x8005;&#x4E0E; Bash &#x517C;&#x5BB9;&#x3002;</p>
+<h2 id="3-&#x547D;&#x4EE4;&#x884C;&#x73AF;&#x5883;"><a name="3-&#x547D;&#x4EE4;&#x884C;&#x73AF;&#x5883;" class="anchor-navigation-ex-anchor" href="#3-&#x547D;&#x4EE4;&#x884C;&#x73AF;&#x5883;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x547D;&#x4EE4;&#x884C;&#x73AF;&#x5883;</h2>
+<h3 id="31-&#x7EC8;&#x7AEF;&#x6A21;&#x62DF;&#x5668;"><a name="31-&#x7EC8;&#x7AEF;&#x6A21;&#x62DF;&#x5668;" class="anchor-navigation-ex-anchor" href="#31-&#x7EC8;&#x7AEF;&#x6A21;&#x62DF;&#x5668;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1 &#x7EC8;&#x7AEF;&#x6A21;&#x62DF;&#x5668;</h3>
+<p>&#x5982;&#x679C;&#x662F;&#x4E0D;&#x5E26;&#x6709;&#x56FE;&#x5F62;&#x73AF;&#x5883;&#x7684; Linux &#x7CFB;&#x7EDF;&#xFF08;&#x6BD4;&#x5982;&#x4E13;&#x7528;&#x4E8E;&#x670D;&#x52A1;&#x5668;&#x7684;&#x7CFB;&#x7EDF;&#xFF09;&#xFF0C;&#x542F;&#x52A8;&#x540E;&#x5C31;&#x76F4;&#x63A5;&#x662F;&#x547D;&#x4EE4;&#x884C;&#x73AF;&#x5883;&#x3002;</p>
+<p>&#x4E0D;&#x8FC7;&#xFF0C;&#x73B0;&#x5728;&#x5927;&#x90E8;&#x5206;&#x7684; Linux &#x53D1;&#x884C;&#x7248;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x9488;&#x5BF9;&#x666E;&#x901A;&#x7528;&#x6237;&#x7684;&#x53D1;&#x884C;&#x7248;&#xFF0C;&#x90FD;&#x662F;&#x56FE;&#x5F62;&#x73AF;&#x5883;&#x3002;&#x7528;&#x6237;&#x767B;&#x5F55;&#x7CFB;&#x7EDF;&#x540E;&#xFF0C;&#x81EA;&#x52A8;&#x8FDB;&#x5165;&#x56FE;&#x5F62;&#x73AF;&#x5883;&#xFF0C;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x542F;&#x52A8;&#x7EC8;&#x7AEF;&#x6A21;&#x62DF;&#x5668;&#xFF0C;&#x624D;&#x80FD;&#x8FDB;&#x5165;&#x547D;&#x4EE4;&#x884C;&#x73AF;&#x5883;&#x3002;</p>
+<p>&#x6240;&#x8C13;&#x201C;&#x7EC8;&#x7AEF;&#x6A21;&#x62DF;&#x5668;&#x201D;&#xFF08;terminal emulator&#xFF09;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x6A21;&#x62DF;&#x547D;&#x4EE4;&#x884C;&#x7A97;&#x53E3;&#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x8BA9;&#x7528;&#x6237;&#x5728;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#x4E2D;&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x73AF;&#x5883;&#xFF0C;&#x5E76;&#x4E14;&#x63D0;&#x4F9B;&#x5404;&#x79CD;&#x9644;&#x52A0;&#x529F;&#x80FD;&#xFF0C;&#x6BD4;&#x5982;&#x8C03;&#x6574;&#x989C;&#x8272;&#x3001;&#x5B57;&#x4F53;&#x5927;&#x5C0F;&#x3001;&#x884C;&#x8DDD;&#x7B49;&#x7B49;&#x3002;</p>
+<p>&#x4E0D;&#x540C; Linux &#x53D1;&#x884C;&#x7248;&#xFF08;&#x51C6;&#x786E;&#x5730;&#x8BF4;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x684C;&#x9762;&#x73AF;&#x5883;&#xFF09;&#x5E26;&#x6709;&#x7684;&#x7EC8;&#x7AEF;&#x7A0B;&#x5E8F;&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x6BD4;&#x5982; KDE &#x684C;&#x9762;&#x73AF;&#x5883;&#x7684;&#x7EC8;&#x7AEF;&#x7A0B;&#x5E8F;&#x662F; konsole&#xFF0C;Gnome &#x684C;&#x9762;&#x73AF;&#x5883;&#x7684;&#x7EC8;&#x7AEF;&#x7A0B;&#x5E8F;&#x662F; gnome-terminal&#xFF0C;&#x7528;&#x6237;&#x4E5F;&#x53EF;&#x4EE5;&#x5B89;&#x88C5;&#x7B2C;&#x4E09;&#x65B9;&#x7684;&#x7EC8;&#x7AEF;&#x7A0B;&#x5E8F;&#x3002;&#x6240;&#x6709;&#x7EC8;&#x7AEF;&#x7A0B;&#x5E8F;&#xFF0C;&#x5C3D;&#x7BA1;&#x540D;&#x5B57;&#x4E0D;&#x540C;&#xFF0C;&#x57FA;&#x672C;&#x529F;&#x80FD;&#x90FD;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x5C31;&#x662F;&#x8BA9;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x8FDB;&#x5165;&#x547D;&#x4EE4;&#x884C;&#x73AF;&#x5883;&#xFF0C;&#x4F7F;&#x7528; Shell&#x3002;</p>
+<h3 id="32-&#x547D;&#x4EE4;&#x884C;&#x63D0;&#x793A;&#x7B26;"><a name="32-&#x547D;&#x4EE4;&#x884C;&#x63D0;&#x793A;&#x7B26;" class="anchor-navigation-ex-anchor" href="#32-&#x547D;&#x4EE4;&#x884C;&#x63D0;&#x793A;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2 &#x547D;&#x4EE4;&#x884C;&#x63D0;&#x793A;&#x7B26;</h3>
+<p>&#x8FDB;&#x5165;&#x547D;&#x4EE4;&#x884C;&#x73AF;&#x5883;&#x4EE5;&#x540E;&#xFF0C;&#x7528;&#x6237;&#x4F1A;&#x770B;&#x5230; Shell &#x7684;&#x63D0;&#x793A;&#x7B26;&#x3002;&#x63D0;&#x793A;&#x7B26;&#x5F80;&#x5F80;&#x662F;&#x4E00;&#x4E32;&#x524D;&#x7F00;&#xFF0C;&#x6700;&#x540E;&#x4EE5;&#x4E00;&#x4E2A;&#x7F8E;&#x5143;&#x7B26;&#x53F7;$&#x7ED3;&#x5C3E;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x4E2A;&#x7B26;&#x53F7;&#x540E;&#x9762;&#x8F93;&#x5165;&#x5404;&#x79CD;&#x547D;&#x4EE4;&#x3002;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>user@hostname<span class="token punctuation">]</span> $
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x5B8C;&#x6574;&#x7684;&#x63D0;&#x793A;&#x7B26;&#x662F;<code>[user@hostname] $</code>&#xFF0C;&#x5176;&#x4E2D;&#x524D;&#x7F00;&#x662F;&#x7528;&#x6237;&#x540D;&#xFF08;user&#xFF09;&#x52A0;&#x4E0A;@&#xFF0C;&#x518D;&#x52A0;&#x4E3B;&#x673A;&#x540D;&#xFF08;hostname&#xFF09;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x7528;&#x6237;&#x540D;&#x662F;bill&#xFF0C;&#x4E3B;&#x673A;&#x540D;&#x662F;<code>home-machine</code>&#xFF0C;&#x524D;&#x7F00;&#x5C31;&#x662F;<code>bill@home-machine</code>&#x3002;</p>
+<p>[!NOTE|style:flat|lable:Mylable|iconVisibility:hidden]</p>
+<blockquote>
+<p>&#x6839;&#x7528;&#x6237;&#xFF08;root&#xFF09;&#x7684;&#x63D0;&#x793A;&#x7B26;&#xFF0C;&#x4E0D;&#x4EE5;&#x7F8E;&#x5143;&#x7B26;&#x53F7;&#xFF08;$&#xFF09;&#x7ED3;&#x5C3E;&#xFF0C;&#x800C;&#x4EE5;&#x4E95;&#x53F7;&#xFF08;#&#xFF09;&#x7ED3;&#x5C3E;&#xFF0C;&#x7528;&#x6765;
+&#x63D0;&#x9192;&#x7528;&#x6237;&#xFF0C;&#x73B0;&#x5728;&#x5177;&#x6709;&#x6839;&#x6743;&#x9650;&#xFF0C;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x5404;&#x79CD;&#x64CD;&#x4F5C;&#xFF0C;&#x52A1;&#x5FC5;&#x5C0F;&#x5FC3;&#xFF0C;&#x4E0D;&#x8981;&#x51FA;&#x73B0;&#x8BEF;&#x64CD;&#x4F5C;&#x3002;</p>
+</blockquote>
+<p>&#x4E3A;&#x4E86;&#x7B80;&#x6D01;&#xFF0C;&#x540E;&#x6587;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x63D0;&#x793A;&#x7B26;&#x90FD;&#x53EA;&#x4F7F;&#x7528;$&#x8868;&#x793A;&#x3002;</p>
+<h3 id="33-&#x8FDB;&#x5165;&#x548C;&#x9000;&#x51FA;&#x65B9;&#x6CD5;"><a name="33-&#x8FDB;&#x5165;&#x548C;&#x9000;&#x51FA;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#33-&#x8FDB;&#x5165;&#x548C;&#x9000;&#x51FA;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>3.3 &#x8FDB;&#x5165;&#x548C;&#x9000;&#x51FA;&#x65B9;&#x6CD5;</h3>
+<p>&#x8FDB;&#x5165;&#x547D;&#x4EE4;&#x884C;&#x73AF;&#x5883;&#x4EE5;&#x540E;&#xFF0C;&#x4E00;&#x822C;&#x5C31;&#x5DF2;&#x7ECF;&#x6253;&#x5F00; Bash &#x4E86;&#x3002;&#x5982;&#x679C;&#x4F60;&#x7684; Shell &#x4E0D;&#x662F; Bash&#xFF0C;&#x53EF;&#x4EE5;&#x8F93;&#x5165;bash&#x547D;&#x4EE4;&#x542F;&#x52A8; Bash&#x3002;</p>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">bash</span>
+</code></pre>
+<p>&#x9000;&#x51FA; Bash &#x73AF;&#x5883;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;exit&#x547D;&#x4EE4;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x6309;&#x4E0B;Ctrl + d&#x3002;</p>
+<pre class="language-"><code class="lang-bash">$ <span class="token builtin class-name">exit</span>
+</code></pre>
+<p>Bash &#x7684;&#x57FA;&#x672C;&#x7528;&#x6CD5;&#x5C31;&#x662F;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x8F93;&#x5165;&#x5404;&#x79CD;&#x547D;&#x4EE4;&#xFF0C;&#x975E;&#x5E38;&#x76F4;&#x89C2;&#x3002;&#x4F5C;&#x4E3A;&#x7EC3;&#x4E60;&#xFF0C;&#x53EF;&#x4EE5;&#x8BD5;&#x7740;&#x8F93;&#x5165;pwd&#x547D;&#x4EE4;&#x3002;&#x6309;&#x4E0B;&#x56DE;&#x8F66;&#x952E;&#xFF0C;&#x5C31;&#x4F1A;&#x663E;&#x793A;&#x5F53;&#x524D;&#x6240;&#x5728;&#x7684;&#x76EE;&#x5F55;&#x3002;</p>
+<pre class="language-"><code class="lang-bash">$ <span class="token builtin class-name">pwd</span>
+/home/me
+</code></pre>
+<p>&#x5982;&#x679C;&#x4E0D;&#x5C0F;&#x5FC3;&#x8F93;&#x5165;&#x4E86;pwe&#xFF0C;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x63D0;&#x793A;&#xFF0C;&#x8868;&#x793A;&#x8F93;&#x5165;&#x51FA;&#x9519;&#xFF0C;&#x6CA1;&#x6709;&#x5BF9;&#x5E94;&#x7684;&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#x3002;</p>
+<pre class="language-"><code class="lang-bash">$ pwe
+bash: pwe&#xFF1A;&#x672A;&#x627E;&#x5230;&#x547D;&#x4EE4;
+</code></pre>
+<h2 id="4-shell-&#x548C;-bash-&#x7684;&#x5386;&#x53F2;"><a name="4-shell-&#x548C;-bash-&#x7684;&#x5386;&#x53F2;" class="anchor-navigation-ex-anchor" href="#4-shell-&#x548C;-bash-&#x7684;&#x5386;&#x53F2;"><i class="fa fa-link" aria-hidden="true"></i></a>4. Shell &#x548C; Bash &#x7684;&#x5386;&#x53F2;</h2>
+<p>Shell &#x4F34;&#x968F;&#x7740; Unix &#x7CFB;&#x7EDF;&#x7684;&#x8BDE;&#x751F;&#x800C;&#x8BDE;&#x751F;&#x3002;</p>
+<p>1969&#x5E74;&#xFF0C;Ken Thompson &#x548C; Dennis Ritchie &#x5F00;&#x53D1;&#x4E86;&#x7B2C;&#x4E00;&#x7248;&#x7684; Unix&#x3002;</p>
+<p>1971&#x5E74;&#xFF0C;Ken Thompson &#x7F16;&#x5199;&#x4E86;&#x6700;&#x521D;&#x7684; Shell&#xFF0C;&#x79F0;&#x4E3A; Thompson shell&#xFF0C;&#x7A0B;&#x5E8F;&#x540D;&#x662F;sh&#xFF0C;&#x65B9;&#x4FBF;&#x7528;&#x6237;&#x4F7F;&#x7528; Unix&#x3002;</p>
+<p>1973&#x5E74;&#x81F3;1975&#x5E74;&#x95F4;&#xFF0C;John R. Mashey &#x6269;&#x5C55;&#x4E86;&#x6700;&#x521D;&#x7684; Thompson shell&#xFF0C;&#x6DFB;&#x52A0;&#x4E86;&#x7F16;&#x7A0B;&#x529F;&#x80FD;&#xFF0C;&#x4F7F;&#x5F97; Shell &#x6210;&#x4E3A;&#x4E00;&#x79CD;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x3002;&#x8FD9;&#x4E2A;&#x7248;&#x672C;&#x7684; Shell &#x79F0;&#x4E3A; Mashey shell&#x3002;</p>
+<p>1976&#x5E74;&#xFF0C;Stephen Bourne &#x7ED3;&#x5408; Mashey shell &#x7684;&#x529F;&#x80FD;&#xFF0C;&#x91CD;&#x5199;&#x4E00;&#x4E2A;&#x65B0;&#x7684; Shell&#xFF0C;&#x79F0;&#x4E3A; Bourne shell&#x3002;</p>
+<p>1978&#x5E74;&#xFF0C;&#x52A0;&#x5DDE;&#x5927;&#x5B66;&#x4F2F;&#x514B;&#x5229;&#x5206;&#x6821;&#x7684; Bill Joy &#x5F00;&#x53D1;&#x4E86; C shell&#xFF0C;&#x4E3A; Shell &#x63D0;&#x4F9B; C &#x8BED;&#x8A00;&#x7684;&#x8BED;&#x6CD5;&#xFF0C;&#x7A0B;&#x5E8F;&#x540D;&#x662F;csh&#x3002;&#x5B83;&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x771F;&#x6B63;&#x66FF;&#x4EE3;sh&#x7684; UNIX shell&#xFF0C;&#x88AB;&#x5408;&#x5E76;&#x5230; Berkeley UNIX &#x7684; 2BSD &#x7248;&#x672C;&#x4E2D;&#x3002;</p>
+<p>1979&#x5E74;&#xFF0C;UNIX &#x7B2C;&#x4E03;&#x7248;&#x53D1;&#x5E03;&#xFF0C;&#x5185;&#x7F6E;&#x4E86; Bourne Shell&#xFF0C;&#x5BFC;&#x81F4;&#x5B83;&#x6210;&#x4E3A; Unix &#x7684;&#x9ED8;&#x8BA4; Shell&#x3002;&#x6CE8;&#x610F;&#xFF0C;Thompson shell&#x3001;Mashey shell &#x548C; Bourne shell &#x90FD;&#x662F;&#x8D1D;&#x5C14;&#x5B9E;&#x9A8C;&#x5BA4;&#x7684;&#x4EA7;&#x54C1;&#xFF0C;&#x7A0B;&#x5E8F;&#x540D;&#x90FD;&#x662F;sh&#x3002;&#x5BF9;&#x4E8E;&#x7528;&#x6237;&#x6765;&#x8BF4;&#xFF0C;&#x5B83;&#x4EEC;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x4E1C;&#x897F;&#xFF0C;&#x53EA;&#x662F;&#x5E95;&#x5C42;&#x4EE3;&#x7801;&#x4E0D;&#x540C;&#x800C;&#x5DF2;&#x3002;</p>
+<p>1983&#x5E74;&#xFF0C;David Korn &#x5F00;&#x53D1;&#x4E86;Korn shell&#xFF0C;&#x7A0B;&#x5E8F;&#x540D;&#x662F;ksh&#x3002;</p>
+<p>1985&#x5E74;&#xFF0C;Richard Stallman &#x6210;&#x7ACB;&#x4E86;&#x81EA;&#x7531;&#x8F6F;&#x4EF6;&#x57FA;&#x91D1;&#x4F1A;&#xFF08;FSF&#xFF09;&#xFF0C;&#x7531;&#x4E8E; Shell &#x7684;&#x7248;&#x6743;&#x5C5E;&#x4E8E;&#x8D1D;&#x5C14;&#x516C;&#x53F8;&#xFF0C;&#x6240;&#x4EE5;&#x4ED6;&#x51B3;&#x5B9A;&#x5199;&#x4E00;&#x4E2A;&#x81EA;&#x7531;&#x7248;&#x6743;&#x7684;&#x3001;&#x4F7F;&#x7528; GNU &#x8BB8;&#x53EF;&#x8BC1;&#x7684; Shell &#x7A0B;&#x5E8F;&#xFF0C;&#x907F;&#x514D; Unix &#x7684;&#x7248;&#x6743;&#x4E89;&#x8BAE;&#x3002;</p>
+<p>1988&#x5E74;&#xFF0C;&#x81EA;&#x7531;&#x8F6F;&#x4EF6;&#x57FA;&#x91D1;&#x4F1A;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x4ED8;&#x85AA;&#x7A0B;&#x5E8F;&#x5458; Brian Fox &#x5199;&#x4E86;&#x4E00;&#x4E2A; Shell&#xFF0C;&#x529F;&#x80FD;&#x57FA;&#x672C;&#x4E0A;&#x662F; Bourne shell &#x7684;&#x514B;&#x9686;&#xFF0C;&#x53EB;&#x505A; Bourne-Again SHell&#xFF0C;&#x7B80;&#x79F0; Bash&#xFF0C;&#x7A0B;&#x5E8F;&#x540D;&#x4E3A;bash&#xFF0C;&#x4EFB;&#x4F55;&#x4EBA;&#x90FD;&#x53EF;&#x4EE5;&#x514D;&#x8D39;&#x4F7F;&#x7528;&#x3002;&#x540E;&#x6765;&#xFF0C;&#x5B83;&#x9010;&#x6E10;&#x6210;&#x4E3A; Linux &#x7CFB;&#x7EDF;&#x7684;&#x6807;&#x51C6; Shell&#x3002;</p>
+<p>1989&#x5E74;&#xFF0C;Bash &#x53D1;&#x5E03;1.0&#x7248;&#x3002;</p>
+<p>1996&#x5E74;&#xFF0C;Bash &#x53D1;&#x5E03;2.0&#x7248;&#x3002;</p>
+<p>2004&#x5E74;&#xFF0C;Bash &#x53D1;&#x5E03;3.0&#x7248;&#x3002;</p>
+<p>2009&#x5E74;&#xFF0C;Bash &#x53D1;&#x5E03;4.0&#x7248;&#x3002;</p>
+<p>2019&#x5E74;&#xFF0C;Bash &#x53D1;&#x5E03;5.0&#x7248;&#x3002;</p>
+<p>&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;bash&#x547D;&#x4EE4;&#x7684;--version&#x53C2;&#x6570;&#x6216;&#x8005;&#x73AF;&#x5883;&#x53D8;&#x91CF;$BASH_VERSION&#xFF0C;&#x67E5;&#x770B;&#x672C;&#x673A;&#x7684; Bash &#x7248;&#x672C;&#x3002;</p>
+<pre class="language-"><code class="lang-bash">$ <span class="token function">bash</span> --version
+GNU bash&#xFF0C;&#x7248;&#x672C; <span class="token number">5.0</span>.3<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>-release <span class="token punctuation">(</span>x86_64-pc-linux-gnu<span class="token punctuation">)</span>
+
+<span class="token comment"># &#x6216;&#x8005;</span>
+$ <span class="token builtin class-name">echo</span> <span class="token environment constant">$BASH_VERSION</span>
+<span class="token number">5.0</span>.3<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>-release
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; ghostwritten &#x6D59;ICP&#x5907;2020032454&#x53F7; 2022 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2022-06-16 08:23:10
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 序言">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="shell_set.html" class="navigation navigation-next " aria-label="Next page: shell set 命令">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Base","level":"1.3","depth":1,"next":{"title":"shell set 命令","level":"1.3.1","depth":2,"path":"Base/shell_set.md","ref":"Base/shell_set.md","articles":[]},"previous":{"title":"序言","level":"1.2","depth":1,"path":"README.md","ref":"./README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["3-ba","accordion","advanced-emoji","anchor-navigation-ex","baidu-tongji","code","change_girls","custom-favicon","donate","chapter-fold","edit-link","flexible-alerts","github-buttons","github","insert-logo","musicxml","prism","prism-themes","pageview-count","-highlight","-search","-lunr","rss","search-plus","splitter","-sharing","sharing-plus","sidebar-style","theme-default","tags","tbfed-pagefooter"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"sidebar-style":{"author":"zongxun","title":"《Shell Docs》"},"tbfed-pagefooter":{"copyright":"Copyright &copy ghostwritten 浙ICP备2020032454号 2022","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"prism":{"css":["prism-themes/themes/prism-holi-theme.css"],"lang":{"shell":"bash"}},"github":{"url":"https://github.com/Ghostwritten"},"baidu-tongji":{"url":"https://hm.baidu.com/hm.js","token":"55e7dfe47f4dc1c018d4042fdfa62565"},"splitter":{},"change_girls":{"time":10,"urls":["https://pic4.zhimg.com/80/v2-e4d7fa3a96aa4a3740d91a313b2c5f5b_1440w.jpg","https://pic4.zhimg.com/80/v2-598a1ab3ffa3db75f7430ff012eef7a3_1440w.jpg","https://pic2.zhimg.com/80/v2-cb16b2e936a7ee03466afcb02d9b56d1_1440w.jpg","https://pic4.zhimg.com/80/v2-b99b00a18858c8a1d73068f534c5d85b_1440w.jpg","https://pic1.zhimg.com/80/v2-4f155317a55a878b05c000ff80add4f8_1440w.jpg","https://pic1.zhimg.com/80/v2-6cf80eabe444ffc4d4da73b1f1ae56b0_1440w.jpg"]},"accordion":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"code":{"copyButtons":true},"donate":{"alipay":"https://github.com/Ghostwritten/shell-docs/blob/gh-pages/assets/imgs/aplipay.png?raw=true","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"https://github.com/Ghostwritten/shell-docs/blob/gh-pages/assets/imgs/wechat.png?raw=true","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["gitbook"],"title":"Gitbook Docs","description":"This is the best book ever.","author":"Zong Xun","feed_url":"http://smoothies.com.cn/rss","site_url":"https://smoothies.com.cn/shell-docs/","managingEditor":"writer@smoothies.com.cn (Zong Xun)","webMaster":"webmaster@smoothies.com.cn (Zong Xun)"},"musicxml":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"favicon":"assets/imgs/1_girl.ico","pageview-count":{},"prism-themes":{},"github-buttons":{"buttons":[{"user":"Ghostwritten","repo":"shell-docs","type":"star","count":true,"size":"small"}]},"custom-favicon":{},"tags":{"placement":"top"},"3-ba":{"configuration":"auto","token":"9ffc0dce8d7079aceab6b0bc18eb626b"},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Danger"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"}},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"all":["facebook","google","twitter","weibo","instapaper"],"douban":false,"facebook":true,"weibo":false,"twitter":true,"pocket":false,"google":false,"qzone":false},"edit-link":{"label":"Edit","base":"https://github.com/Ghostwritten/shell-docs/edit/master/"},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"insert-logo":{"style":"background: none; max-height: 100px; min-height: 100px","url":"https://img-blog.csdnimg.cn/e10caf2bc4a94aaea5b4fde70392fd0c.png"},"search-plus":{}},"theme":"default","author":"宗勋 - zongxun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Shell Docs","language":"zh-hans","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"Docker":"https://smoothies.com.cn/docker-docs/Overview.html","Blog":"https://smoothies.com.cn","Kubernetes":"https://smoothies.com.cn/kubernetes-docs/Overview.html","Go":"https://smoothies.com.cn/go-docs/Overview.html","Prometheus":"https://smoothies.com.cn/prometheus-docs/Overview.html","Command":"https://smoothies.com.cn/linux-command-docs/Overview.html","Javascript":"https://smoothies.com.cn/javascript-docs/Overview.html","Shell":"https://smoothies.com.cn/shell-docs/Overview.html","Linux":"https://smoothies.com.cn/linux-docs/Overview.html","Gitbook":"https://smoothies.com.cn/gitbook-docs/Overview.html","Python":"https://smoothies.com.cn/python-docs/Overview.html","Exam":"https://ghostwritten.gitbook.io/kubernetes-exam-in-action/"}},"gitbook":"*","description":"这是一本关于 [Shell](https://zh.m.wikipedia.org/zh/Unix_shell) 的书籍"},"file":{"path":"Base/README.md","mtime":"2022-06-16T08:23:10.233Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-10-16T08:58:25.363Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-baidu-tongji/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-change_girls/girls.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-musicxml/osmd.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-musicxml/musicxml.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-musicxml/promise.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-pageview-count/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sidebar-style/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
